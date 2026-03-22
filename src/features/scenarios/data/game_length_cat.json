@@ -1,0 +1,25 @@
+[
+    {
+        "id": "gl_fixed_at_6",
+        "name": "Límit de torns fix",
+        "turns": 6
+    },
+    {
+        "id": "gl_random",
+        "name": "Durada del joc aleatòria",
+        "turns": 5,
+        "notes": [
+            "Començant a la fi de la cinquena ronda, tira un D6 al final de cada ronda i afegeix el número de la ronda al tirada.",
+            "Si el resultat és major o igual a 10, el combat acaba immediatament, de qualsevol manera, el combat continua una ronda més."
+        ]
+    },
+    {
+        "id": "gl_break_point",
+        "name": "Punt de ruptura",
+        "notes": [
+            "Al principi de qualsevol subfase de Inici de Torn, si la Força d'Unitat restant de qualsevol de les armades ha caigut per sota de 25%, el combat acaba immediatament.",
+            "Si només una armada ha arribat a la seva Punt de ruptura, les seues unitats restants comencen a fugir, cruixen a polvo, etc.",
+            "Si totes dues armades han arribat a les seves Punts de ruptura, els punts de victòria s'acumulan com a normal, però els resultats seran Marginal (Victòria/Derrota)."
+        ]
+    }
+]

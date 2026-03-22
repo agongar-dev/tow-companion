@@ -1,0 +1,122 @@
+{
+    "common": {
+        "back": "BACK",
+        "close": "CLOSE",
+        "description": "Description",
+        "image": "Image",
+        "position": "Position",
+        "name": "Name",
+        "type": "Type",
+        "types": "Types",
+        "rules": "Rules",
+        "victory-conditions": "Victory Conditions",
+        "special-rules": "Special Rules",
+        "summary": "Summary",
+        "tags": "Tags",
+        "points": "Points",
+        "loading": {
+            "subtitle": "Loading contents"
+        },
+        "yes": "Yes",
+        "no": "No",
+        "cancel": "Cancel",
+        "ok": " OK"
+    },
+    "home": {
+        "title": "HOME",
+        "description": "Welcome to the Tow Manager, a simple and easy-to-use app to manage your TOW battles."
+    },
+    "scenario-list": {
+        "title": "SCENARIOS",
+        "description": "List of available scenarios",
+        "single": {
+            "title": "Singles"
+        },
+        "double": {
+            "title": "Doubles"
+        }
+    },
+    "objective-list": {
+        "title": "OBJECTIVES",
+        "description": "List of available objectives"
+    },
+    "terrain-list": {
+        "title": "TERRAINS",
+        "description": "List of available terrains"
+    },
+    "player-list": {
+        "title": "PLAYERS",
+        "description": "List of available players",
+        "create": "Create a new player"
+    },
+    "armies-list": {
+        "title": "ARMIES",
+        "description": "List of available armies"
+    },
+    "filters": {
+        "single": "Single",
+        "double": "Double",
+        "official": "Official",
+        "unofficial": "Unofficial"
+    },
+    "scenario-detail": {
+        "setup-instructions": "Setup Instructions",
+        "deployment-instructions": "Deployment Instructions",
+        "main-objectives": "Main Objectives",
+        "recommended-objectives": "Secondary Objectives",
+        "game-length": "Game Length"
+    },
+    "objective-detail": {
+        "repeatable":"Repeatable",
+        "score-timing": {
+            "label": "Score Timing",
+            "immediate": "Immediate",
+            "end-of-turn": "End of Turn",
+            "end-of-battle": "End of Battle"
+        }
+    },
+    "terrain-detail": {
+        "base-type": "Base Type",
+        "rules-movement": "Rules of Movement",
+        "rules-distance": "Rules of Distance",
+        "rules-close-combat": "Rules of Close Combat",
+        "rules-shooting": "Rules of Shooting",
+        "rules-line-of-sight": "Rules of Line of Sight",
+        "rules-other": "Other Rules"
+    },
+    "settings": {
+        "title": "SETTINGS"
+    },
+    "language": {
+        "title": "Language",
+        "select": "Select your preferred language",
+        "list": {
+            "en": "English",
+            "es": "Español",
+            "cat": "Català"
+        }
+    },
+    "theme": {
+        "title": "Theme",
+        "light": "Light",
+        "dark": "Dark"
+    },
+    "navSettings": {
+        "title": "Navigation",
+        "select": "Select your preferred navigation",
+        "list": {
+            "armies": "Armies",
+            "players": "Players"
+        }
+    },
+    "audio": {
+        "title": "Audio",
+        "select": "Configure the audio",
+        "list": {
+            "on": "On",
+            "mute": "Mute",
+            "music": "Only Music",
+            "sfx": "Only SFX"
+        }
+    }
+}

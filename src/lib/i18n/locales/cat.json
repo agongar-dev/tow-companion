@@ -1,0 +1,129 @@
+{
+    "common": {
+        "back": "TORNAR",
+        "close": "TANCAR",
+        "description": "Descripció",
+        "image": "Imatge",
+        "position": "Posició",
+        "name": "Nom",
+        "type": "Tipus",
+        "types": "Tipus",
+        "rules": "Regles",
+        "victory-conditions": "Condicions de victòria",
+        "special-rules": "Regles especials",
+        "summary": "Resum",
+        "tags": "Etiquetes",
+        "loading": {
+            "subtitle": "Carregant continguts"
+        },
+        "yes": "Sí",
+        "no": "No",
+        "cancel": "Cancel·lar",
+        "ok": " D'acord"
+    },
+    "home": {
+        "title": "INICI",
+        "description": "Benvingut a Tow Manager, una aplicació senzilla i fàcil d'usar per gestionar les teves batalles TOW."
+    },
+    "scenario-list": {
+        "title": "ESCENARIS",
+        "description": "Llistat d'escenaris disponibles",
+        "single": {
+            "title": "Individuals"
+        },
+        "double": {
+            "title": "Per equips"
+        }
+    },
+    "objective-list": {
+        "title": "OBJECTIUS",
+        "description": "Llistat d'objectius disponibles"
+    },
+    "terrain-list": {
+        "title": "TERRENYS",
+        "description": "Llistat de terrenys disponibles"
+    },
+    "player-list": {
+        "title": "JUGADORS",
+        "description": "Llistat de jugadors disponibles",
+        "create": "Crear un nou jugador"
+    },
+    "armies-list": {
+        "title": "EXÈRCITS",
+        "description": "Llistat d'exèrcits disponibles"
+    },
+    "filters": {
+        "single": "Individuals",
+        "double": "Per equips",
+        "official": "Oficial",
+        "unofficial": "No oficial"
+    },
+    "scenario-detail": {
+        "setup-instructions": "Preparació",
+        "deployment-instructions": "Instruccions de desplegament",
+        "rules": "Regles especials",
+        "main-objectives": "Objectius principals",
+        "recommended-objectives": "Objectius secundaris",
+        "game-length": "Durada de la batalla"
+    },
+    "objective-detail": {
+        "points": {
+            "label": "Punts"
+        },
+        "repeatable": {
+            "label": "Repetible",
+            "yes": "Sí",
+            "no": "No"
+        },
+        "score-timing": {
+            "label": "Moment de puntuació",
+            "immediate": "Immediat",
+            "end-of-turn": "Final de turn",
+            "end-of-battle": "Final de batalla"
+        }
+    },
+    "terrain-detail": {
+        "base-type": "Tipus base",
+        "rules-movement": "Regles de moviment",
+        "rules-distance": "Regles de distància",
+        "rules-close-combat": "Regles de combat cercan",
+        "rules-shooting": "Regles de tir",
+        "rules-line-of-sight": "Regles de visibilidat",
+        "rules-other": "Altres regles"
+    },
+    "settings": {
+        "title": "CONFIGURACIÓ"
+    },
+    "language": {
+        "title": "Idioma",
+        "select": "Selecciona el teu idioma preferit",
+        "list": {
+            "en": "English",
+            "es": "Español",
+            "cat": "Català"
+        }
+    },
+    "theme": {
+        "title": "Tema",
+        "light": "Clar",
+        "dark": "Fosc"
+    },
+    "navSettings": {
+        "title": "Navegació",
+        "select": "Selecciona la navegació preferida",
+        "list": {
+            "armies": "Exèrcits",
+            "players": "Jugadors"
+        }
+    },
+    "audio": {
+        "title": "Àudio",
+        "select": "Configura l'àudio",
+        "list": {
+            "on": "Activat",
+            "mute": "Silenciat",
+            "music": "Només música",
+            "sfx": "Només SFX"
+        }
+    }
+}

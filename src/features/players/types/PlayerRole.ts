@@ -1,0 +1,8 @@
+export enum PlayerRole {
+  PLAYER = "PLAYER",
+  ATTACKER = "ATTACKER",
+  DEFENDER = "DEFENDER",
+  SPECTATOR = "SPECTATOR",
+  REFEREE = "REFEREE",
+  ADMIN = "ADMIN",
+}

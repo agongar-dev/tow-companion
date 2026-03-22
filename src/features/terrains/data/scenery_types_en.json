@@ -1,0 +1,119 @@
+[
+    {
+        "id": "open_ground",
+        "name": "Open Ground",
+        "description": "Default terrain with no special effects",
+        "rulesMovement": [
+            "Treated as open ground (No penalties)"
+        ]
+    },
+    {
+        "id": "difficult_terrain",
+        "name": "Difficult Terrain",
+        "description": "Terrain that slows movement and disrupts units",
+        "rulesMovement": [
+            "-1 to Movement characteristic (mínimum 1)",
+            "Charging units roll 2D6 and discard the highest result."
+        ],
+        "rulesCloseCombat": [
+            "Units with 25%+ of models in difficult terrain are Disrupted and cannot claim Rank Bonus."
+        ]
+    },
+    {
+        "id": "dangerous_terrain",
+        "name": "Dangerous Terrain",
+        "description": "Hazardous terrain that can wound models.",
+        "rulesMovement": [
+            "-1 to Movement characteristic (minimum 1).",
+            "Charging units roll 2D6 and discard the highest result.",
+            "Models moving through must take a Dangerous Terrain test (D6: on 1, suffer 1 Wound).",
+            "A model must test for each separate feature entered."
+        ],
+        "rulesCloseCombat": [
+            "Units with 25%+ of models in difficult terrain are Disrupted and cannot claim Rank Bonus."
+        ]
+    },
+    {
+        "id": "impassable",
+        "name": "Impassable",
+        "description": "Obstacles that cannot be crossed",
+        "rulesMovement": [
+            "Units cannot move across impassable terrain; they must go around it."
+        ],
+        "rulesCloseCombat": [
+            "If impassable terrain prevents alignment during a charge, the charge counts as disordered."
+        ]
+    },
+    {
+        "id": "low_linear_obstacle",
+        "name": "Low Linear Obstacle",
+        "description": "Obstacles less than 2\" high (walls, fences, ditches, etc.)",
+        "rulesMovement": [
+            "-1 to Movement characteristic (mínimum 1)",
+            "Charging units roll 2D6 and discard the highest result."
+        ],
+        "rulesCloseCombat": [
+            "Units straddling a low linear obstacle are Disrupted (no Rank Bonus).",
+            "Charging a defended low linear obstacle causes a Disordered charge unless the unit has Fly (X)."
+        ]
+    },
+    {
+        "id": "high_linear_obstacle",
+        "name": "High Linear Obstacle",
+        "description": "Obstacles equal or greater than 2\" high (buildings, castle  walls, fortifications, etc.)",
+        "rulesMovement": [
+            "Units cannot move across impassable terrain; they must go around it."
+        ],
+        "rulesCloseCombat": [
+            "If impassable terrain prevents alignment during a charge, the charge counts as disordered."
+        ]
+    },
+    {
+        "id": "woods",
+        "name": "Woods",
+        "description": "Forests that hinder movement and obstruct sight.",
+        "rulesMovement": [
+            "Can count as difficult, dangerous, or impassable depending on density."
+        ],
+        "rulesCloseCombat": [
+            "Units partially inside count as having cover."
+        ],
+        "rulesLineOfSight": [
+            "Models behind or inside woods have partial cover.",
+            "If neither model is inside, LoS cannot cross woods."
+        ]
+    },
+    {
+        "id": "hill",
+        "name": "Hill",
+        "description": "Elevated terrain that provides tactical advantages",
+        "rulesMovement": [
+            "Treated as open ground"
+        ],
+        "rulesCloseCombat": [
+            "Unit holding the high ground gains combat bonus."
+        ],
+        "rulesShooting": [
+            "Unit on a hill may fire with one additional rank."
+        ],
+        "rulesLineOfSight": [
+            "Units on a hill can see over other units not on a hill.",
+            "Units on a hill can be seen more easily.",
+            "A hill blocks line of sight for units behind it, unless they are on the hill."
+        ]
+    },
+    {
+        "id": "battlefield_decoration",
+        "name": "Battlefield Decoration",
+        "description": "Small decorative terrain pieces (<2\").",
+        "rulesMovement": [
+            "Ignored for movement."
+        ],
+        "rulesCloseCombat": [
+            "Ignored for combat."
+        ],
+        "rulesLineOfSight": [
+            "May obscure line of sight."
+        ]
+    }
+]

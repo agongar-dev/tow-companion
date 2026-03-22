@@ -1,0 +1,282 @@
+[
+    {
+        "id": "s1",
+        "name": "Upon The Field of Glory",
+        "description": "A two rival forces manoeuvre into position, an abvious battleground forms between them. With both armies able to bring their full strength to bear, the day will be won through skill at arms, unyielding courage and the wit of cunning Generals.",
+        "setup_instructions": [
+            "If the tables have been set up by the organiser, move straight to deployment. If the players are setting up the terrain, place and scatter terrain."
+        ],
+        "deployment_instructions": [
+            "Once the battlefield has been set up, the winner of a roll-off chooses their deployment zone (A or B), as shown on the map below. Once deployment zones have been chosen, the winner of this roll-off deploys the first unit. Players deploy their armies using the alternating units method"
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_random",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-scenario-1.jpg",
+        "recommended_objectives": [
+            "baggage_trains",
+            "special_features",
+            "domination",
+            "strategic_locations_2",
+            "strategic_locations_3",
+            "strategic_locations_4"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Face to face battle between two armies, with the battlefield being divided into two equal zones"
+    },
+    {
+        "id": "s2",
+        "name": "King Of The Hill",
+        "description": "Not only does controlling high ground give a commanding view of the battlefield, a strategically located hill can make for an easily defensible base of operations, one that can become an all but unassailable position.",
+        "setup_instructions": [
+            "If the tables have been set up by the organiser, move straight to deployment. If the players are setting up the terrain, place and scatter terrain as described on page 16. In either case, ensure a single large hill (measuring no more than 12\" x 18\") is placed in the centre of the battlefield. Once placed, this hill does not scatter"
+        ],
+        "deployment_instructions": [
+            "Once the battlefield has been set up, the winner of a roll-off chooses their deployment zone (A or B), as shown on the map below. Once deployment zones have been chosen, the winner of this roll-off deploys the first unit. Players deploy their armies using the alternating units method"
+        ],
+        "game_length": [
+            "gl_random",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-scenario-2.jpg",
+        "special_rules": [
+            {
+                "title": "The Hill",
+                "description": "In this scenario, the hill can be controlled at the end of each turn by a single Core unit that is within 9\" of its centre (the centre of the battlefield), that has a Unit Strength of 10 or more, that is not fleeing and that has not succumbed to Stupidity. If two or more eligible units are within 9\" of the centre of the hill, the closest unit controls it. If two or more eligible units are equally close to the centre of the hill, the unit with the higher Unit Strength controls it. However, if two or more eligible enemy units are equally close to the centre of the hill and both have the same Unit Strength, the hill is 'contested' and neither unit controls it."
+            },
+            {
+                "title": "Running up-hill",
+                "description": "Vanguard moves cannot be made in this scenario."
+            }
+        ],
+        "main_objectives": [
+            "control_hill"
+        ],
+        "recommended_objectives": [
+            "baggage_trains",
+            "special_features"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Control the hill as soon as possible and defend it with your life!"
+    },
+    {
+        "id": "s3",
+        "name": "Drawn Battlelines",
+        "description": "When absolute victory or defeat rests on the outcome of a single battle, Generals can be lured into drawing battlelines and joining the fight before their armies have fully mustered. In such circumstances, those committed to the battle must hope reinforcements arrive in a timely manner.",
+        "setup_instructions": [
+            "If the tables have been set up by the organiser, move straight to deployment. If the players are setting up the terrain, place and scatter terrain."
+        ],
+        "deployment_instructions": [
+            "Once the battlefield has been set up, the winner of a roll-off chooses their deployment zone (A or B), as shown on the map below. Before deploying their army, each player rolls a D6. If either player rolls a 1, both players must choose a single unit from their army whose troop type is infantry or cavalry to be held in reserve (see below).",
+            "Once this roll has been made, the player that won the roll-off to choose deployment zones deploys the first unit. Units that are not held in reserve can be deployed using the alternating units method, as described on page 17. During deployment, characters may join units that are being held in reserve as a result of the scenario special rule. In other words, any character that can join a unit can be held in reserve, provided they join a unit."
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_random"
+        ],
+        "localImage": "matched-play-scenario-3.jpg",
+        "special_rules": [
+            {
+                "title": "Reserves",
+                "description": "Reserves are not deployed at the start of the battle. Instead they can enter play during the Compulsory Moves sub-phase of any turn of their controlling players choosing, other than the first. When they arrive, reserves may enter the battlefield as reinforcements, from any point on a battlefield edge within their deployment zone."
+            }
+        ],
+        "main_objectives": [
+            "strategic_locations_3"
+        ],
+        "recommended_objectives": [
+            "domination",
+            "baggage_trains"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Face to face battle between two armies, with the battlefield being divided into two equal zones with deployment from the corners"
+    },
+    {
+        "id": "s4",
+        "name": "Close Quarters",
+        "description": "Countless are the vicious and bloody battles that have been fought in the narrow mountain passes of the Old World, where armies are forced to meet one another head-on. With little room to manoeuvre and retreat a perilous option, grim-faced warriors clash to the ringing of steel and echoing battlecries.",
+        "setup_instructions": [
+            "If the tables have been set up by the organiser, move straight to deployment. If the players are setting up the terrain, place and scatter terrain"
+        ],
+        "deployment_instructions": [
+            "Once the battlefield has been set up, the winner of a roll-off chooses their deployment zone (A or B), as shown on the map below. Once deployment zones have been chosen, the winner of this roll-off deploys the first unit. Players deploy their armies using the alternating units method"
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-scenario-4.jpg",
+        "special_rules": [
+            {
+                "title": "Bottleneck",
+                "description": "The battle is fought in a narrow mountain pass enclosed by high cliffs. Because of this, the short battlefield edges count as impassable terrain. As such, no units (including fleeing units or any arriving from reserve) can leave or enter the battlefield via either short edge unless they have the Ethereal or Fly (X) special rule."
+            }
+        ],
+        "main_objectives": [
+            "strategic_locations_2"
+        ],
+        "recommended_objectives": [
+            "domination"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Face to face battle between two armies, with the battlefield being divided into two equal zones with deployment reduced to the center of the edge of each zone"
+    },
+    {
+        "id": "s5",
+        "name": "A Chance Encounter",
+        "description": "Either by luck, misfortune or wild circumstance, two enemy armies stumble into one another in the fog of war. Both forces scramble to prepare for battle and defend their supply lines, eager to seize upon the chance to deal a significant blow to their foes if they can marshal their forces in time.",
+        "setup_instructions": [
+            "If the tables have been set up by the organiser, move straight to deployment. If the players are setting up the terrain, place and scatter terrain"
+        ],
+        "deployment_instructions": [
+            "Once the battlefield has been set up, the winner of a roll-off chooses their deployment zone (A1, A2, B1 or B2), as shown on the map below. If the winner of the roll-off selects a deployment zone marked 'A', then their opponent will use the opposite deployment zone, also marked 'A' If the winner of the roll-off selects a deployment zone marked 'B', then their opponent will use the opposite deployment zone, also marked 'B'. Once deployment zones have been chosen, the winner of this roll-off deploys the first unit. Players deploy their armies using the alternating units method"
+        ],
+        "game_length": [
+            "gl_random",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-scenario-5.jpg",
+        "main_objectives": [
+            "special_features"
+        ],
+        "recommended_objectives": [
+            "domination",
+            "baggage_trains"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "A face to face battle between two armies, with crossed deployment zones that makes the center a bloody war zone"
+    },
+    {
+        "id": "s6",
+        "name": "Encirclement",
+        "description": "Whilst many Generals believe that glory can be won by driving through the heart of the enemy, others will attempt to outflank and encircle their foes, crushing the flanks of the enemy beneath the relentless advance of their army.",
+        "setup_instructions": [
+            "If the tables have been set up by the organiser, move straight to deployment. If the players are setting up the terrain, place and scatter terrain"
+        ],
+        "deployment_instructions": [
+            "Once the battlefield has been set up, the winner of a roll-off chooses their deployment zone (A or B), as shown on the map below. Once deployment zones have been chosen, the winner of this roll-off deploys the first unit. Players deploy their armies using the alternating units method"
+        ],
+        "localImage": "matched-play-scenario-6.jpg",
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_random"
+        ],
+        "main_objectives": [
+            "strategic_locations_4"
+        ],
+        "recommended_objectives": [
+            "baggage_trains",
+            "special_features"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Face to face battle between two armies, with the deployment areas lightly displaced from the front line"
+    },
+    {
+        "id": "d1",
+        "name": "Double Envelopment",
+        "description": "As two Generals array their warriors for battle, their allies race towards the field. With the battlelines well and truly muddled, friends must fight through the enemy in order to regroup and establish a semblance of order.",
+        "setup_instructions": [
+            "If the tables have been set up by the organiser, move straight to deployment. If the players are setting up the terrain, place and scatter terrain"
+        ],
+        "deployment_instructions": [
+            "Once the battlefield has been set up, the winner of a roll-off chooses their deployment zone (A or B), as shown on the map below. Once deployment zones have been chosen, the winner of this roll-off deploys the first unit, belonging to their team's Primary force. Players deploy their Primary forces using the alternating units method. Both team's Secondary forces are held in reserve as in the picture"
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-doubles-scenario-1.jpg",
+        "special_rules": [
+            {
+                "title": "Reserves",
+                "description": "Reserves are not deployed at the start of the battle. Instead, they can enter play during the Compulsory Moves sub-phase of any turn - including the first - of their controlling player's choosing. When they arrive, reserves will enter the battlefield from the short battlefield edge indicated on the deployment map below. However, should their controlling player wish, war machines belonging to the Secondary force may instead be deployed with the Primary force."
+            }
+        ],
+        "recommended_objectives": [
+            "baggage_trains",
+            "special_features",
+            "domination",
+            "strategic_locations_3",
+            "strategic_locations_4"
+        ],
+        "tags": [
+            "double",
+            "official"
+        ],
+        "summary": "Face to face battle between two armies, with the battlefield being divided into two equal zones"
+    },
+    {
+        "id": "d2",
+        "name": "Forward Battlelines",
+        "description": "Though the vanguard of an army often hosts its best and strongest warriors, they are seldom the first to wet their blades when battle is met. Units of scouts and light cavalry engage in lightning fast skirmishes on the battle's edge, long before the lumbering formations of infantry edge towards one another.",
+        "setup_instructions": [
+            "If the tables have been set up by the organiser, move straight to deployment. If the players are setting up the terrain, place and scatter terrain."
+        ],
+        "deployment_instructions": [
+            "Once the battlefield has been set up, the winner of a roll-off chooses their deployment zone (A or B), as shown on the map below. Once deployment zones have been chosen, the winner of this roll-off deploys the first unit. Players deploy their armies using the alternating units method"
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_random"
+        ],
+        "localImage": "matched-play-doubles-scenario-2.jpg",
+        "recommended_objectives": [
+            "baggage_trains",
+            "strategic_locations_2",
+            "strategic_locations_3"
+        ],
+        "tags": [
+            "double",
+            "official"
+        ],
+        "summary": "Face to face battle between two armies, with the battlefield being divided into two equal zones with deployment from the corners"
+    },
+    {
+        "id": "d3",
+        "name": "The Old Outpost",
+        "description": "Though this ageing tower has long been abandoned, it was once a vital watchtower whose garrison stood sentinel over the land for leagues in each direction. Now, as war once again plagues the region, the old tower's commanding view of the surrounding countryside is something neither force can afford to relinquish without a fight.",
+        "setup_instructions": [
+            "If the tables have been set up by the organiser, move straight to deployment. If the players are setting up the terrain, place and scatter terrain as described on page 16. In either case, ensure a single special feature, representing the abandoned outpost, is placed in the centre of the battlefield."
+        ],
+        "deployment_instructions": [
+            "Once the battlefield has been set up, the winner of a roll-off chooses their deployment zone (A or B), as shown on the map below. Once deployment zones have been chosen, the winner of this roll-off deploys the first unit. Players deploy their armies using the alternating units method"
+        ],
+        "game_length": [
+            "gl_random",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-doubles-scenario-3.jpg",
+        "main_objectives": [
+            "special_features"
+        ],
+        "recommended_objectives": [
+            "baggage_trains",
+            "strategic_locations_4"
+        ],
+        "tags": [
+            "double",
+            "official"
+        ],
+        "summary": "Face to face battle between two armies, with the battlefield being divided into two equal zones with deployment reduced to the center of the edge of each zone"
+    }
+]

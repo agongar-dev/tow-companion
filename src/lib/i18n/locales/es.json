@@ -1,0 +1,137 @@
+{
+    "common": {
+        "back": "VOLVER",
+        "close": "CERRAR",
+        "description": "Descripción",
+        "image": "Imagen",
+        "position": "Posición",
+        "name": "Nombre",
+        "type": "Tipo",
+        "types": "Tipos",
+        "rules": "Reglas",
+        "victory-conditions": "Condiciones de victoria",
+        "special-rules": "Reglas especiales",
+        "summary": "Resumen",
+        "tags": "Etiquetas",
+        "loading": {
+            "subtitle": "Cargando contenidos"
+        },
+        "yes": "Sí",
+        "no": "No",
+        "cancel": "Cancelar",
+        "ok": " OK"
+    },
+    "home": {
+        "title": "INICIO",
+        "description": "Bienvenido a Tow Manager, una aplicación sencilla y fácil de usar para gestionar tus batallas TOW."
+    },
+    "scenario-list": {
+        "title": "ESCENARIOS",
+        "description": "Listado de escenarios disponibles",
+        "single": {
+            "title": "Individuales"
+        },
+        "double": {
+            "title": "Por equipos"
+        }
+    },
+    "objective-list": {
+        "title": "OBJETIVOS",
+        "description": "Listado de objetivos disponibles",
+        "single": {
+            "title": "Escenarios sencillos"
+        },
+        "double": {
+            "title": "Escenarios dobles"
+        }
+    },
+    "terrain-list": {
+        "title": "TERRENOS",
+        "description": "Listado de terrenos disponibles"
+    },
+    "player-list": {
+        "title": "JUGADORES",
+        "description": "Listado de jugadores disponibles",
+        "create-player": "Crear jugador"
+    },
+    "armies-list": {
+        "title": "EJÉRCITOS",
+        "description": "Listado de ejércitos disponibles"
+    },
+    "filters": {
+        "single": "Individuales",
+        "double": "Por equipos",
+        "official": "Oficial",
+        "unofficial": "No oficial"
+    },
+    "scenario-detail": {
+        "setup-instructions": "Preparación",
+        "deployment-instructions": "Instrucciones de despliegue",
+        "rules": "Reglas especiales",
+        "main-objectives": "Objetivos principales",
+        "recommended-objectives": "Objetivos secundarios",
+        "game-length": "Duración de la batalla"
+    },
+    "objective-detail": {
+        "points": {
+            "label": "Puntos"
+        },
+        "repeatable": {
+            "label": "Repetible",
+            "yes": "Sí",
+            "no": "No"
+        },
+        "score-timing": {
+            "label": "Momento de puntuación",
+            "immediate": "Inmediato",
+            "end-of-turn": "Final de turno",
+            "end-of-battle": "Final de batalla"
+        },
+        "type": "Tipo",
+        "victory-conditions": "Condiciones de victoria"
+    },
+    "terrain-detail": {
+        "base-type": "Tipo base",
+        "rules-movement": "Reglas de movimiento",
+        "rules-distance": "Reglas de distancia",
+        "rules-close-combat": "Reglas de combate cercano",
+        "rules-shooting": "Reglas de tiro",
+        "rules-line-of-sight": "Reglas de visibilidad",
+        "rules-other": "Otras reglas"
+    },
+    "settings": {
+        "title": "CONFIGURACIÓN"
+    },
+    "language": {
+        "title": "Idioma",
+        "select": "Selecciona tu idioma preferido",
+        "list": {
+            "en": "English",
+            "es": "Español",
+            "cat": "Català"
+        }
+    },
+    "theme": {
+        "title": "Tema",
+        "light": "Claro",
+        "dark": "Oscuro"
+    },
+    "navSettings": {
+        "title": "Navegación",
+        "select": "Selecciona la navegación preferida",
+        "list": {
+            "armies": "Ejércitos",
+            "players": "Jugadores"
+        }
+    },
+    "audio": {
+        "title": "Audio",
+        "select": "Configura el audio",
+        "list": {
+            "on": "Activado",
+            "mute": "Silenciado",
+            "music": "Solo música",
+            "sfx": "Solo sonidos"
+        }
+    }
+}

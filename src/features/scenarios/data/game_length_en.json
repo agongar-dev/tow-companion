@@ -1,0 +1,25 @@
+[
+    {
+        "id": "gl_fixed_at_6",
+        "name": "Fixed Turn Limit",
+        "turns": 6
+    },
+    {
+        "id": "gl_random",
+        "name": "Random Game Length",
+        "turns": 5,
+        "notes": [
+            "Starting at the end of the fifth round, roll a D6 at the end of each round and add the round number to the roll.",
+            "If the result is greater or equal to 10, the battle ends immediately, elseway, the battle continues one more round."
+        ]
+    },
+    {
+        "id": "gl_break_point",
+        "name": "Break Point",
+        "notes": [
+            "At the beginning of any Start of Turn sub-phase, if the remaining Unit Strength of either army has fallen below 25%, the battle ends immediately.",
+            "If only one army has reached its Break Point, its remaining units begin flee, crumble to dust, etc.",
+            "If both armies have reached their Break Points, the Victory Points are totalled as normal, but the results will be Marginal (Victory/Loss)."
+        ]
+    }
+]

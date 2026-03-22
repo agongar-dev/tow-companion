@@ -1,0 +1,119 @@
+[
+    {
+        "id": "open_ground",
+        "name": "Terreno Abierto",
+        "description": "Terreno por defecto sin efectos especiales",
+        "rulesMovement": [
+            "Tratado como terreno abierto (sin penalizadores)"
+        ]
+    },
+    {
+        "id": "difficult_terrain",
+        "name": "Terreno Difícil",
+        "description": "Terreno que ralentiza el movimiento y desordena las unidades",
+        "rulesMovement": [
+            "-1 a la característica de Movimiento (mínimo 1).",
+            "Las unidades que cargan tiran 2D6 y descartan el resultado más alto."
+        ],
+        "rulesCloseCombat": [
+            "Las unidades con un 25% o más de miniaturas en terreno difícil están Desorganizadas y no pueden reclamar Bono por Filas."
+        ]
+    },
+    {
+        "id": "dangerous_terrain",
+        "name": "Terreno Peligroso",
+        "description": "Terreno peligroso que puede causar heridas a las miniaturas.",
+        "rulesMovement": [
+            "-1 a la característica de Movimiento (mínimo 1).",
+            "Las unidades que cargan tiran 2D6 y descartan el resultado más alto.",
+            "Las miniaturas que se mueven a través deben realizar un chequeo de Terreno Peligroso (D6: con 1, sufren 1 Herida).",
+            "Cada miniatura debe realizar un chequeo por cada elemento de terreno peligroso que atraviese."
+        ],
+        "rulesCloseCombat": [
+            "Las unidades con un 25% o más de miniaturas en terreno difícil están Desorganizadas y no pueden reclamar Bono por Filas."
+        ]
+    },
+    {
+        "id": "impassable",
+        "name": "Terreno Infranqueable",
+        "description": "Obstáculos que no pueden cruzarse",
+        "rulesMovement": [
+            "Las unidades no pueden moverse a través de terreno infranqueable; deben rodearlo."
+        ],
+        "rulesCloseCombat": [
+            "Si el terreno infranqueable impide la alineación durante una carga, la carga cuenta como desorganizada."
+        ]
+    },
+    {
+        "id": "low_linear_obstacle",
+        "name": "Obstáculo Lineal Bajo",
+        "description": "Obstáculos de menos de 2\" de altura (muros, cercas, zanjas, etc.)",
+        "rulesMovement": [
+            "-1 a la característica de Movimiento (mínimo 1).",
+            "Las unidades que cargan tiran 2D6 y descartan el resultado más alto."
+        ],
+        "rulesCloseCombat": [
+            "Las unidades que se sitúan sobre un obstáculo lineal bajo están Desorganizadas (sin Bono por Filas).",
+            "Cargar contra un obstáculo lineal bajo defendido provoca una carga Desorganizada a menos que la unidad tenga Volar (X)."
+        ]
+    },
+    {
+        "id": "high_linear_obstacle",
+        "name": "Obstáculo Lineal Alto",
+        "description": "Obstáculos de 2\" o más de altura (edificios, muros de castillo, fortificaciones, etc.)",
+        "rulesMovement": [
+            "Las unidades no pueden moverse a través de terreno infranqueable; deben rodearlo."
+        ],
+        "rulesCloseCombat": [
+            "Si el terreno infranqueable impide la alineación durante una carga, la carga cuenta como desorganizada."
+        ]
+    },
+    {
+        "id": "woods",
+        "name": "Bosques",
+        "description": "Bosques que dificultan el movimiento y obstruyen la visión.",
+        "rulesMovement": [
+            "Pueden contar como terreno difícil, peligroso o infranqueable dependiendo de la densidad."
+        ],
+        "rulesCloseCombat": [
+            "Las unidades parcialmente dentro cuentan como si tuvieran cobertura."
+        ],
+        "rulesLineOfSight": [
+            "Las miniaturas detrás o dentro de un bosque tienen cobertura parcial.",
+            "Si ninguna miniatura está dentro, la línea de visión no puede cruzar el bosque."
+        ]
+    },
+    {
+        "id": "hill",
+        "name": "Colina",
+        "description": "Terreno elevado que proporciona ventajas tácticas",
+        "rulesMovement": [
+            "Tratado como terreno abierto."
+        ],
+        "rulesCloseCombat": [
+            "La unidad que mantiene la posición elevada obtiene un bono en combate."
+        ],
+        "rulesShooting": [
+            "La unidad en una colina puede disparar con una fila adicional."
+        ],
+        "rulesLineOfSight": [
+            "Las unidades en una colina pueden ver por encima de otras que no estén en colina.",
+            "Las unidades en una colina pueden ser vistas más fácilmente.",
+            "Una colina bloquea la línea de visión para las unidades detrás de ella, a menos que también estén en la colina."
+        ]
+    },
+    {
+        "id": "battlefield_decoration",
+        "name": "Decoración de Campo de Batalla",
+        "description": "Pequeñas piezas de escenografía decorativa (<2\").",
+        "rulesMovement": [
+            "Ignoradas para el movimiento."
+        ],
+        "rulesCloseCombat": [
+            "Ignoradas para el combate."
+        ],
+        "rulesLineOfSight": [
+            "Pueden dificultar la línea de visión."
+        ]
+    }
+]

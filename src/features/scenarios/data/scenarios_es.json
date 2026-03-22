@@ -1,0 +1,282 @@
+[
+    {
+        "id": "s1",
+        "name": "Sobre el campo de la gloria",
+        "description": "Dos fuerzas rivales maniobran en posición, un campo de batalla obvio se forma entre ellas. Con ambos ejércitos capaces de desplegar toda su fuerza, el día se ganará con habilidad con las armas, coraje inquebrantable y el ingenio de generales astutos.",
+        "setup_instructions": [
+            "Si las mesas han sido configuradas por el organizador, pasa directamente al despliegue. Si los jugadores están configurando el terreno, coloca y dispersa el terreno."
+        ],
+        "deployment_instructions": [
+            "Una vez que el campo de batalla ha sido configurado, el ganador de una tirada elige su zona de despliegue (A o B), como se muestra en el mapa a continuación. Una vez elegidas las zonas de despliegue, el ganador de esta tirada despliega la primera unidad. Los jugadores despliegan sus ejércitos usando el método de unidades alternas."
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_random",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-scenario-1.jpg",
+        "recommended_objectives": [
+            "baggage_trains",
+            "special_features",
+            "domination",
+            "strategic_locations_2",
+            "strategic_locations_3",
+            "strategic_locations_4"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Batalla cara a cara entre dos ejércitos, con el campo de batalla dividido en dos zonas iguales."
+    },
+    {
+        "id": "s2",
+        "name": "Rey de la Colina",
+        "description": "Controlar un terreno elevado no solo proporciona una vista dominante del campo de batalla, sino que una colina estratégicamente ubicada puede servir como una base de operaciones fácilmente defendible, una que puede convertirse en una posición casi inexpugnable.",
+        "setup_instructions": [
+            "Si las mesas han sido configuradas por el organizador, pasa directamente al despliegue. Si los jugadores están configurando el terreno, coloca y dispersa el terreno como se describe en la página 16. En cualquier caso, asegúrate de que una única colina grande (que no mida más de 12\" x 18\") se coloque en el centro del campo de batalla. Una vez colocada, esta colina no se dispersa."
+        ],
+        "deployment_instructions": [
+            "Una vez que el campo de batalla ha sido configurado, el ganador de una tirada elige su zona de despliegue (A o B), como se muestra en el mapa a continuación. Una vez elegidas las zonas de despliegue, el ganador de esta tirada despliega la primera unidad. Los jugadores despliegan sus ejércitos usando el método de unidades alternas."
+        ],
+        "game_length": [
+            "gl_random",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-scenario-2.jpg",
+        "special_rules": [
+            {
+                "title": "La Colina",
+                "description": "En este escenario, la colina puede ser controlada al final de cada turno por una única unidad de Tropa que esté a 9\" o menos de su centro (el centro del campo de batalla), que tenga una Fuerza de Unidad de 10 o más, que no esté huyendo y que no haya sucumbido a Estupidez. Si dos o más unidades elegibles están a 9\" o menos del centro de la colina, la unidad más cercana la controla. Si dos o más unidades elegibles están igualmente cerca del centro de la colina, la unidad con mayor Fuerza de Unidad la controla. Sin embargo, si dos o más unidades enemigas elegibles están igualmente cerca del centro de la colina y ambas tienen la misma Fuerza de Unidad, la colina está 'disputada' y ninguna unidad la controla."
+            },
+            {
+                "title": "Corriendo cuesta arriba",
+                "description": "Los movimientos de Vanguardia no se pueden realizar en este escenario."
+            }
+        ],
+        "main_objectives": [
+            "control_hill"
+        ],
+        "recommended_objectives": [
+            "baggage_trains",
+            "special_features"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "¡Controla la colina lo antes posible y defiéndela con tu vida!"
+    },
+    {
+        "id": "s3",
+        "name": "Líneas de batalla trazadas",
+        "description": "Cuando la victoria o la derrota absoluta dependen del resultado de una sola batalla, los generales pueden ser tentados a trazar líneas de batalla y unirse a la lucha antes de que sus ejércitos se hayan reunido por completo. En tales circunstancias, aquellos comprometidos con la batalla deben esperar que los refuerzos lleguen de manera oportuna.",
+        "setup_instructions": [
+            "Si las mesas han sido configuradas por el organizador, pasa directamente al despliegue. Si los jugadores están configurando el terreno, coloca y dispersa el terreno."
+        ],
+        "deployment_instructions": [
+            "Una vez que el campo de batalla ha sido configurado, el ganador de una tirada elige su zona de despliegue (A o B), como se muestra en el mapa a continuación. Antes de desplegar su ejército, cada jugador tira un D6. Si cualquiera de los dos jugadores saca un 1, ambos jugadores deben elegir una sola unidad de su ejército cuyo tipo de tropa sea infantería o caballería para ser mantenida en reserva (ver abajo).",
+            "Una vez que se ha hecho esta tirada, el jugador que ganó la tirada para elegir las zonas de despliegue, despliega la primera unidad. Las unidades que no se mantienen en reserva pueden ser desplegadas usando el método de unidades alternas, como se describe en la página 17. Durante el despliegue, los personajes pueden unirse a unidades que se mantienen en reserva como resultado de la regla especial del escenario. En otras palabras, cualquier personaje que pueda unirse a una unidad puede ser mantenido en reserva, siempre que se una a una unidad."
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_random"
+        ],
+        "localImage": "matched-play-scenario-3.jpg",
+        "special_rules": [
+            {
+                "title": "Reservas",
+                "description": "Las reservas no se despliegan al comienzo de la batalla. En cambio, pueden entrar en juego durante la subfase de Movimientos Obligatorios de cualquier turno de la elección del jugador que las controla, que no sea el primero. Cuando llegan, las reservas pueden entrar en el campo de batalla como refuerzos, desde cualquier punto en un borde del campo de batalla dentro de su zona de despliegue."
+            }
+        ],
+        "main_objectives": [
+            "strategic_locations_3"
+        ],
+        "recommended_objectives": [
+            "domination",
+            "baggage_trains"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Batalla cara a cara entre dos ejércitos, con el campo de batalla dividido en dos zonas iguales con despliegue desde las esquinas."
+    },
+    {
+        "id": "s4",
+        "name": "Enfrentamiento Cercano",
+        "description": "Incontables son las batallas viciosas y sangrientas que se han librado en los estrechos pasos de montaña del Viejo Mundo, donde los ejércitos se ven obligados a encontrarse de frente. Con poco espacio para maniobrar y la retirada como una opción peligrosa, guerreros de rostro sombrío chocan al son del acero y los gritos de batalla resonantes.",
+        "setup_instructions": [
+            "Si las mesas han sido configuradas por el organizador, pasa directamente al despliegue. Si los jugadores están configurando el terreno, coloca y dispersa el terreno."
+        ],
+        "deployment_instructions": [
+            "Una vez que el campo de batalla ha sido configurado, el ganador de una tirada elige su zona de despliegue (A o B), como se muestra en el mapa a continuación. Una vez elegidas las zonas de despliegue, el ganador de esta tirada despliega la primera unidad. Los jugadores despliegan sus ejércitos usando el método de unidades alternas."
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-scenario-4.jpg",
+        "special_rules": [
+            {
+                "title": "Cuello de botella",
+                "description": "La batalla se libra en un estrecho paso de montaña encerrado por altos acantilados. Debido a esto, los bordes cortos del campo de batalla cuentan como terreno intransitable. Como tal, ninguna unidad (incluyendo unidades que huyen o cualquiera que llegue de la reserva) puede salir o entrar en el campo de batalla a través de ninguno de los bordes cortos a menos que tengan la regla especial Etéreo o Volar (X)."
+            }
+        ],
+        "main_objectives": [
+            "strategic_locations_2"
+        ],
+        "recommended_objectives": [
+            "domination"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Batalla cara a cara entre dos ejércitos, con el campo de batalla dividido en dos zonas iguales con el despliegue reducido al centro del borde de cada zona."
+    },
+    {
+        "id": "s5",
+        "name": "Un encuentro casual",
+        "description": "Ya sea por suerte, desgracia o circunstancias extrañas, dos ejércitos enemigos se topan uno con el otro en la niebla de la guerra. Ambas fuerzas se apresuran a prepararse para la batalla y defender sus líneas de suministro, ansiosas por aprovechar la oportunidad de asestar un golpe significativo a sus enemigos si pueden reunir sus fuerzas a tiempo.",
+        "setup_instructions": [
+            "Si las mesas han sido configuradas por el organizador, pasa directamente al despliegue. Si los jugadores están configurando el terreno, coloca y dispersa el terreno."
+        ],
+        "deployment_instructions": [
+            "Una vez que el campo de batalla ha sido configurado, el ganador de una tirada elige su zona de despliegue (A1, A2, B1 o B2), como se muestra en el mapa a continuación. Si el ganador de la tirada elige una zona de despliegue marcada con 'A', entonces su oponente usará la zona de despliegue opuesta, también marcada con 'A'. Si el ganador de la tirada elige una zona de despliegue marcada con 'B', entonces su oponente usará la zona de despliegue opuesta, también marcada con 'B'. Una vez elegidas las zonas de despliegue, el ganador de esta tirada despliega la primera unidad. Los jugadores despliegan sus ejércitos usando el método de unidades alternas."
+        ],
+        "game_length": [
+            "gl_random",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-scenario-5.jpg",
+        "main_objectives": [
+            "special_features"
+        ],
+        "recommended_objectives": [
+            "domination",
+            "baggage_trains"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Una batalla cara a cara entre dos ejércitos, con zonas de despliegue cruzadas que hacen del centro una zona de guerra sangrienta."
+    },
+    {
+        "id": "s6",
+        "name": "Cerco",
+        "description": "Mientras muchos generales creen que la gloria se puede ganar atravesando el corazón del enemigo, otros intentarán flanquear y cercar a sus enemigos, aplastando los flancos del enemigo bajo el avance implacable de su ejército.",
+        "setup_instructions": [
+            "Si las mesas han sido configuradas por el organizador, pasa directamente al despliegue. Si los jugadores están configurando el terreno, coloca y dispersa el terreno."
+        ],
+        "deployment_instructions": [
+            "Una vez que el campo de batalla ha sido configurado, el ganador de una tirada elige su zona de despliegue (A o B), como se muestra en el mapa a continuación. Una vez elegidas las zonas de despliegue, el ganador de esta tirada despliega la primera unidad. Los jugadores despliegan sus ejércitos usando el método de unidades alternas."
+        ],
+        "localImage": "matched-play-scenario-6.jpg",
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_random"
+        ],
+        "main_objectives": [
+            "strategic_locations_4"
+        ],
+        "recommended_objectives": [
+            "baggage_trains",
+            "special_features"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Batalla cara a cara entre dos ejércitos, con las áreas de despliegue ligeramente desplazadas de la línea del frente."
+    },
+    {
+        "id": "d1",
+        "name": "Doble envolvimiento",
+        "description": "Mientras dos generales alinean a sus guerreros para la batalla, sus aliados corren hacia el campo. Con las líneas de batalla bien y verdaderamente confusas, los amigos deben luchar a través del enemigo para reagruparse y establecer una apariencia de orden.",
+        "setup_instructions": [
+            "Si las mesas han sido configuradas por el organizador, pasa directamente al despliegue. Si los jugadores están configurando el terreno, coloca y dispersa el terreno."
+        ],
+        "deployment_instructions": [
+            "Una vez que el campo de batalla ha sido configurado, el ganador de una tirada elige su zona de despliegue (A o B), como se muestra en el mapa a continuación. Una vez elegidas las zonas de despliegue, el ganador de esta tirada despliega la primera unidad, perteneciente a la fuerza primaria de su equipo. Los jugadores despliegan sus fuerzas primarias usando el método de unidades alternas. Las fuerzas secundarias de ambos equipos se mantienen en reserva como en la imagen."
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-doubles-scenario-1.jpg",
+        "special_rules": [
+            {
+                "title": "Reservas",
+                "description": "Las reservas no se despliegan al comienzo de la batalla. En cambio, pueden entrar en juego durante la subfase de Movimientos Obligatorios de cualquier turno, incluido el primero, de la elección de su jugador controlador. Cuando llegan, las reservas entrarán en el campo de batalla desde el borde corto del campo de batalla indicado en el mapa de despliegue a continuación. Sin embargo, si su jugador controlador lo desea, las máquinas de guerra que pertenecen a la fuerza secundaria pueden desplegarse con la fuerza primaria en su lugar."
+            }
+        ],
+        "recommended_objectives": [
+            "baggage_trains",
+            "special_features",
+            "domination",
+            "strategic_locations_3",
+            "strategic_locations_4"
+        ],
+        "tags": [
+            "double",
+            "official"
+        ],
+        "summary": "Batalla cara a cara entre dos ejércitos, con el campo de batalla dividido en dos zonas iguales."
+    },
+    {
+        "id": "d2",
+        "name": "Líneas de batalla avanzadas",
+        "description": "Aunque la vanguardia de un ejército a menudo alberga a sus guerreros mejores y más fuertes, rara vez son los primeros en mojar sus espadas cuando se encuentra la batalla. Las unidades de exploradores y caballería ligera se dedican a escaramuzas rápidas como el rayo en el borde de la batalla, mucho antes de que las formaciones pesadas de infantería se acerquen unas a otras.",
+        "setup_instructions": [
+            "Si las mesas han sido configuradas por el organizador, pasa directamente al despliegue. Si los jugadores están configurando el terreno, coloca y dispersa el terreno."
+        ],
+        "deployment_instructions": [
+            "Una vez que el campo de batalla ha sido configurado, el ganador de una tirada elige su zona de despliegue (A o B), como se muestra en el mapa a continuación. Una vez elegidas las zonas de despliegue, el ganador de esta tirada despliega la primera unidad. Los jugadores despliegan sus ejércitos usando el método de unidades alternas."
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_random"
+        ],
+        "localImage": "matched-play-doubles-scenario-2.jpg",
+        "recommended_objectives": [
+            "baggage_trains",
+            "strategic_locations_2",
+            "strategic_locations_3"
+        ],
+        "tags": [
+            "double",
+            "official"
+        ],
+        "summary": "Batalla cara a cara entre dos ejércitos, con el campo de batalla dividido en dos zonas iguales con despliegue desde las esquinas."
+    },
+    {
+        "id": "d3",
+        "name": "El antiguo puesto de avanzada",
+        "description": "Aunque esta torre envejecida ha sido abandonada hace mucho tiempo, una vez fue una atalaya vital cuya guarnición vigilaba la tierra por leguas en cada dirección. Ahora, mientras la guerra una vez más plaga la región, la vista dominante de la vieja torre sobre el campo circundante es algo que ninguna fuerza puede permitirse ceder sin una lucha.",
+        "setup_instructions": [
+            "Si las mesas han sido configuradas por el organizador, pasa directamente al despliegue. Si los jugadores están configurando el terreno, coloca y dispersa el terreno como se describe en la página 16. En cualquier caso, asegúrate de que una única característica especial, que represente el puesto de avanzada abandonado, se coloque en el centro del campo de batalla."
+        ],
+        "deployment_instructions": [
+            "Una vez que el campo de batalla ha sido configurado, el ganador de una tirada elige su zona de despliegue (A o B), como se muestra en el mapa a continuación. Una vez elegidas las zonas de despliegue, el ganador de esta tirada despliega la primera unidad. Los jugadores despliegan sus ejércitos usando el método de unidades alternas."
+        ],
+        "game_length": [
+            "gl_random",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-doubles-scenario-3.jpg",
+        "main_objectives": [
+            "special_features"
+        ],
+        "recommended_objectives": [
+            "baggage_trains",
+            "strategic_locations_4"
+        ],
+        "tags": [
+            "double",
+            "official"
+        ],
+        "summary": "Batalla cara a cara entre dos ejércitos, con el campo de batalla dividido en dos zonas iguales con el despliegue reducido al centro del borde de cada zona."
+    }
+]
