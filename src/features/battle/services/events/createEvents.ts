@@ -1,6 +1,6 @@
-import { Unit, UnitStatus } from "../../player/types/unit";
 import { v4 as uuidv4 } from "react-native-uuid/dist/v4";
-import { MatchEvent } from "../types/events/matchEvent";
+import { Unit, UnitStatus } from "../../../armies/types/Unit";
+import { MatchEvent } from "../../types/event/matchEvent";
 
 /**
  * Creates a unit destroyed event
@@ -29,7 +29,7 @@ export const createUnitFleeingEvent = (unit: Unit, turn: number, actorPlayerId: 
     id: uuidv4(),
     type: UnitStatus.FLEEING,
     targetUnitId: unit.id,
-    pointsAwarded: Math.ceil(unit.cost ?? 0) / 2,
+    pointsAwarded: Math.ceil((unit.cost ?? 0) / 2),
     turn,
     actorPlayerId,
 });
@@ -45,7 +45,7 @@ export const createUnitFledEvent = (unit: Unit, turn: number, actorPlayerId: str
     id: uuidv4(),
     type: UnitStatus.FLED,
     targetUnitId: unit.id,
-    pointsAwarded: Math.ceil(unit.cost ?? 0) / 2,
+    pointsAwarded: Math.ceil((unit.cost ?? 0) / 2),
     turn,
     actorPlayerId,
 });
@@ -55,14 +55,14 @@ export const createUnitFledEvent = (unit: Unit, turn: number, actorPlayerId: str
  * @param unit the unit that was below quarter
  * @param turn the turn of the event
  * @param actorPlayerId the player id of the actor
- * @returns the created event        
- */ 
+ * @returns the created event
+ */
 export const createUnitBelowQuarterEvent = (unit: Unit, turn: number, actorPlayerId: string): MatchEvent => ({
     id: uuidv4(),
     type: UnitStatus.UNDER_25_PERCENT,
     targetUnitId: unit.id,
     remainingSize: unit.initialSize ?? 0,
-    pointsAwarded: Math.ceil(unit.cost ?? 0) / 4,
+    pointsAwarded: Math.ceil((unit.cost ?? 0) / 4),
     turn,
     actorPlayerId,
 });

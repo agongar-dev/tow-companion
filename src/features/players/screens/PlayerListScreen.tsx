@@ -24,7 +24,7 @@ const PlayerListScreen = () => {
     const players: Player[] = PlayerRepository.getAll();
     const armies: Record<string, ArmyList> = PlayerService.getArmiesMap();
 
-    const [drawerStack, setDrawerStack] = useState<React.ReactNode[]>([]);
+    const [, setDrawerStack] = useState<React.ReactNode[]>([]);
 
     const openPlayerDetail = (player: Player) => {
         const detail = (
@@ -56,6 +56,7 @@ const PlayerListScreen = () => {
                 closeRightDrawer();
                 return [];
             }
+
             const newStack = prev.slice(0, -1);
             openRightDrawer(newStack[newStack.length - 1]);
             return newStack;

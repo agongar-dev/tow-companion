@@ -1,5 +1,5 @@
 import BattleMMKVRepository from "../repositories/BattleMMKVRepository";
-import { MatchEvent } from "../types/events/matchEvent";
+import { MatchEvent } from "../types/event/matchEvent";
 
 export const getEventsByMatch = (matchId: string): MatchEvent[] => {
   return BattleMMKVRepository.getMatchById(matchId)?.events ?? [];

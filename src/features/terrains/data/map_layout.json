@@ -1,0 +1,542 @@
+[
+    {
+        "id": "etc2024_map1",
+        "name": "ETC 2024 - Map 1",
+        "description": "Dense central woods flanked by ruins, offering strong cover lanes.",
+        "sceneryItems": [
+            {
+                "itemId": "etc2024_hill",
+                "positionOnMap": {
+                    "L": 48,
+                    "S": 6
+                }
+            },
+            {
+                "itemId": "etc2024_forest",
+                "positionOnMap": {
+                    "L": 20,
+                    "S": 21
+                }
+            },
+            {
+                "itemId": "etc2024_ruin",
+                "positionOnMap": {
+                    "L": 5,
+                    "S": 12
+                }
+            },
+            {
+                "itemId": "etc2024_impass_small",
+                "positionOnMap": {
+                    "L": 11,
+                    "S": 10
+                }
+            },
+            {
+                "itemId": "etc2024_impass_big",
+                "positionOnMap": {
+                    "L": 6,
+                    "S": 8
+                }
+            },
+            {
+                "itemId": "etc2024_water",
+                "positionOnMap": {
+                    "L": 10,
+                    "S": 17
+                }
+            },
+            {
+                "itemId": "etc2024_field",
+                "positionOnMap": {
+                    "L": 14,
+                    "S": 24
+                }
+            },
+            {
+                "itemId": "etc2024_wall",
+                "positionOnMap": {
+                    "L": 21,
+                    "S": 6
+                }
+            },
+            {
+                "itemId": "etc2024_wall",
+                "positionOnMap": {
+                    "L": 18,
+                    "S": 22
+                }
+            }
+        ],
+        "image": "etc2024_map1",
+        "tags": [
+            "ETC 2024",
+            "Forest"
+        ]
+    },
+    {
+        "id": "etc2024_map2",
+        "name": "ETC 2024 - Map 2",
+        "description": "Twin forests dominate each side with a hill in the rear",
+        "sceneryItems": [
+            {
+                "itemId": "etc2024_hill",
+                "positionOnMap": {
+                    "L": 17,
+                    "S": 16
+                }
+            },
+            {
+                "itemId": "etc2024_forest",
+                "positionOnMap": {
+                    "L": 17,
+                    "S": 24
+                }
+            },
+            {
+                "itemId": "etc2024_ruin",
+                "positionOnMap": {
+                    "L": 3,
+                    "S": 5
+                }
+            },
+            {
+                "itemId": "etc2024_impass_small",
+                "positionOnMap": {
+                    "L": 7,
+                    "S": 13
+                }
+            },
+            {
+                "itemId": "etc2024_impass_big",
+                "positionOnMap": {
+                    "L": 8,
+                    "S": 33
+                }
+            },
+            {
+                "itemId": "etc2024_water",
+                "positionOnMap": {
+                    "L": 1,
+                    "S": 7
+                }
+            },
+            {
+                "itemId": "etc2024_field",
+                "positionOnMap": {
+                    "L": 8,
+                    "S": 22
+                }
+            },
+            {
+                "itemId": "etc2024_wall",
+                "positionOnMap": {
+                    "L": 4,
+                    "S": 7
+                }
+            }
+        ],
+        "image": "etc2024_map2",
+        "tags": [
+            "ETC 2024",
+            "Forest"
+        ]
+    },
+    {
+        "id": "etc2024_map3",
+        "name": "ETC 2024 - Map 3",
+        "description": "",
+        "sceneryItems": [
+            {
+                "itemId": "etc2024_hill",
+                "positionOnMap": {
+                    "L": 13,
+                    "S": 16
+                }
+            },
+            {
+                "itemId": "etc2024_forest",
+                "positionOnMap": {
+                    "L": 7,
+                    "S": 10
+                }
+            },
+            {
+                "itemId": "etc2024_ruin",
+                "positionOnMap": {
+                    "L": 17,
+                    "S": 3
+                }
+            },
+            {
+                "itemId": "etc2024_impass_big",
+                "positionOnMap": {
+                    "L": 5,
+                    "S": 16
+                }
+            },
+            {
+                "itemId": "etc2024_water",
+                "positionOnMap": {
+                    "L": 5,
+                    "S": 7
+                }
+            },
+            {
+                "itemId": "etc2024_water",
+                "positionOnMap": {
+                    "L": 20,
+                    "S": 20
+                }
+            },
+            {
+                "itemId": "etc2024_wall",
+                "positionOnMap": {
+                    "L": 17,
+                    "S": 28
+                }
+            },
+            {
+                "itemId": "etc2024_wall",
+                "positionOnMap": {
+                    "L": 6,
+                    "S": 9
+                }
+            }
+        ],
+        "image": "etc2024_map3",
+        "tags": [
+            "ETC 2024",
+            "Forest"
+        ]
+    },
+    {
+        "id": "etc2024_map4",
+        "name": "ETC 2024 - Map 4",
+        "description": "",
+        "sceneryItems": [
+            {
+                "itemId": "etc2024_hill",
+                "positionOnMap": {
+                    "L": 17,
+                    "S": 10
+                }
+            },
+            {
+                "itemId": "etc2024_forest",
+                "positionOnMap": {
+                    "L": 10,
+                    "S": 15
+                }
+            },
+            {
+                "itemId": "etc2024_ruin",
+                "positionOnMap": {
+                    "L": 28,
+                    "S": 19
+                }
+            },
+            {
+                "itemId": "etc2024_impass_big",
+                "positionOnMap": {
+                    "L": 8,
+                    "S": 24
+                }
+            },
+            {
+                "itemId": "etc2024_impass_big",
+                "positionOnMap": {
+                    "L": 16,
+                    "S": 8
+                }
+            },
+            {
+                "itemId": "etc2024_water",
+                "positionOnMap": {
+                    "L": 2,
+                    "S": 31
+                }
+            },
+            {
+                "itemId": "etc2024_wall",
+                "positionOnMap": {
+                    "L": 19,
+                    "S": 19
+                }
+            },
+            {
+                "itemId": "etc2024_wall",
+                "positionOnMap": {
+                    "L": 10,
+                    "S": 15
+                }
+            }
+        ],
+        "image": "etc2024_map4",
+        "tags": [
+            "ETC 2024",
+            "Forest"
+        ]
+    },
+    {
+        "id": "etc2024_map5",
+        "name": "ETC 2024 - Map 5",
+        "description": "",
+        "sceneryItems": [
+            {
+                "itemId": "etc2024_hill",
+                "positionOnMap": {
+                    "L": 14,
+                    "S": 12
+                }
+            },
+            {
+                "itemId": "etc2024_forest",
+                "positionOnMap": {
+                    "L": 8,
+                    "S": 27
+                }
+            },
+            {
+                "itemId": "etc2024_ruin",
+                "positionOnMap": {
+                    "L": 29,
+                    "S": 8
+                }
+            },
+            {
+                "itemId": "etc2024_impass_small",
+                "positionOnMap": {
+                    "L": 12,
+                    "S": 12
+                }
+            },
+            {
+                "itemId": "etc2024_impass_small",
+                "positionOnMap": {
+                    "L": 9,
+                    "S": 7
+                }
+            },
+            {
+                "itemId": "etc2024_water",
+                "positionOnMap": {
+                    "L": 5,
+                    "S": 15
+                }
+            },
+            {
+                "itemId": "etc2024_field",
+                "positionOnMap": {
+                    "L": 21,
+                    "S": 32
+                }
+            }
+        ],
+        "image": "etc2024_map5",
+        "tags": [
+            "ETC 2024",
+            "Forest"
+        ]
+    },
+    {
+        "id": "etc2024_map6",
+        "name": "ETC 2024 - Map 6",
+        "description": "",
+        "sceneryItems": [
+            {
+                "itemId": "etc2024_hill",
+                "positionOnMap": {
+                    "L": 8,
+                    "S": 19
+                }
+            },
+            {
+                "itemId": "etc2024_forest",
+                "positionOnMap": {
+                    "L": 19,
+                    "S": 30
+                }
+            },
+            {
+                "itemId": "etc2024_impass_big",
+                "positionOnMap": {
+                    "L": 21,
+                    "S": 9
+                }
+            },
+            {
+                "itemId": "etc2024_water",
+                "positionOnMap": {
+                    "L": 18,
+                    "S": 10
+                }
+            },
+            {
+                "itemId": "etc2024_water",
+                "positionOnMap": {
+                    "L": 5,
+                    "S": 7
+                }
+            },
+            {
+                "itemId": "etc2024_field",
+                "positionOnMap": {
+                    "L": 2,
+                    "S": 31
+                }
+            },
+            {
+                "itemId": "etc2024_wall",
+                "positionOnMap": {
+                    "L": 7,
+                    "S": 14
+                }
+            },
+            {
+                "itemId": "etc2024_wall",
+                "positionOnMap": {
+                    "L": 23,
+                    "S": 14
+                }
+            }
+        ],
+        "image": "etc2024_map6",
+        "tags": [
+            "ETC 2024",
+            "Forest"
+        ]
+    },
+    {
+        "id": "etc2024_map7",
+        "name": "ETC 2024 - Map 7",
+        "description": "",
+        "sceneryItems": [
+            {
+                "itemId": "etc2024_hill",
+                "positionOnMap": {
+                    "L": 17,
+                    "S": 15
+                }
+            },
+            {
+                "itemId": "etc2024_hill",
+                "positionOnMap": {
+                    "L": 17,
+                    "S": 10
+                }
+            },
+            {
+                "itemId": "etc2024_forest",
+                "positionOnMap": {
+                    "L": 11,
+                    "S": 16
+                }
+            },
+            {
+                "itemId": "etc2024_impass_small",
+                "positionOnMap": {
+                    "L": 8,
+                    "S": 33
+                }
+            },
+            {
+                "itemId": "etc2024_impass_small",
+                "positionOnMap": {
+                    "L": 6,
+                    "S": 12
+                }
+            },
+            {
+                "itemId": "etc2024_water",
+                "positionOnMap": {
+                    "L": 17,
+                    "S": 23
+                }
+            },
+            {
+                "itemId": "etc2024_field",
+                "positionOnMap": {
+                    "L": 19,
+                    "S": 7
+                }
+            },
+            {
+                "itemId": "etc2024_wall",
+                "positionOnMap": {
+                    "L": 23,
+                    "S": 4
+                }
+            }
+        ],
+        "image": "etc2024_map7",
+        "tags": [
+            "ETC 2024",
+            "Forest"
+        ]
+    },
+    {
+        "id": "etc2024_map8",
+        "name": "ETC 2024 - Map 8",
+        "description": "",
+        "sceneryItems": [
+            {
+                "itemId": "etc2024_hill",
+                "positionOnMap": {
+                    "L": 13,
+                    "S": 13
+                }
+            },
+            {
+                "itemId": "etc2024_hill",
+                "positionOnMap": {
+                    "L": 17,
+                    "S": 4
+                }
+            },
+            {
+                "itemId": "etc2024_forest",
+                "positionOnMap": {
+                    "L": 13,
+                    "S": 11
+                }
+            },
+            {
+                "itemId": "etc2024_ruin",
+                "positionOnMap": {
+                    "L": 10,
+                    "S": 4
+                }
+            },
+            {
+                "itemId": "etc2024_impass_big",
+                "positionOnMap": {
+                    "L": 3,
+                    "S": 25
+                }
+            },
+            {
+                "itemId": "etc2024_water",
+                "positionOnMap": {
+                    "L": 5,
+                    "S": 24
+                }
+            },
+            {
+                "itemId": "etc2024_wall",
+                "positionOnMap": {
+                    "L": 17,
+                    "S": 24
+                }
+            },
+            {
+                "itemId": "etc2024_wall",
+                "positionOnMap": {
+                    "L": 19,
+                    "S": 20
+                }
+            }
+        ],
+        "image": "etc2024_map8"
+    }
+]

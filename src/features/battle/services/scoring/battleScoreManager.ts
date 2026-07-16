@@ -1,4 +1,4 @@
-import { MatchEvent } from "../types/events/matchEvent";
+import { MatchEvent } from "../../types/event/matchEvent";
 import { TeamInMatch } from "../../types/match";
 
 export function calculateVictoryPointsByPlayer(events: MatchEvent[]): Record<string, number> {
@@ -6,7 +6,7 @@ export function calculateVictoryPointsByPlayer(events: MatchEvent[]): Record<str
 
     for (const event of events) {
         const { actorPlayerId, pointsAwarded } = event as any;
-        if (!actorPlayerId || typeof pointsAwarded !== 'number') {
+        if (!actorPlayerId || typeof pointsAwarded !== "number") {
             continue;
         }
 

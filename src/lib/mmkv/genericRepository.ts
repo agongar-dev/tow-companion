@@ -4,22 +4,24 @@ export function createCachedRepository<T extends { id: string }>(
     storageKey: string,
     assetLoader: () => T[]
 ) {
-    let cache: T[];
+    let cache: T[] | null = null;
 
     const ensureCache = (): T[] => {
-
-        if (cache) return cache;
+        if (cache) {
+            return cache;
+        }
 
         const raw = loadString(storageKey);
         if (raw) {
-            cache = JSON.parse(raw);
-            return cache;
+            const storedItems = JSON.parse(raw) as T[];
+            cache = storedItems;
+            return storedItems;
         }
 
         const data = assetLoader();
         saveString(storageKey, JSON.stringify(data));
         cache = data;
-        return cache;
+        return data;
     };
 
     return {
@@ -40,14 +42,13 @@ export function createCachedRepository<T extends { id: string }>(
 
         /** Guardar y actualizar cache */
         saveAll: (items: T[]) => {
-            console.log('saveAll', items);
             saveString(storageKey, JSON.stringify(items));
             cache = items;
         },
 
         /** Resetear cache (por idioma, etc.) */
         clearCache: () => {
-            cache = [];
+            cache = null;
         }
     };
 }

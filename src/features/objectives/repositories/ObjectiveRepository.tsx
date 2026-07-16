@@ -26,7 +26,6 @@ const loadObjectivesFromAssets = (): Objective[] => {
 const baseRepo = createCachedRepository<Objective>("objectives", loadObjectivesFromAssets);
 
 export const ObjectiveRepository = {
-    
     init: async () => {
         if (cachedObjectives) {
             return cachedObjectives;
@@ -37,9 +36,7 @@ export const ObjectiveRepository = {
     },
 
     getAll: (): Objective[] => {
-        console.log('get objectives');
         if (!cachedObjectives) {
-            console.log('objectives not cached');
             throw new Error("Objectives not initialized");
         }
         return cachedObjectives ?? [];

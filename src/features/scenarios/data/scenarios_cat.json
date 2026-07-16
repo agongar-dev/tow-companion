@@ -1,0 +1,282 @@
+[
+    {
+        "id": "s1",
+        "name": "Sobre el camp de la glòria",
+        "description": "Dues forces rivals maniobren en posició, un camp de batalla obvi es forma entre elles. Ambdós exèrcits capaços de desplegar tota la seva força, el dia es guanyarà amb habilitat amb les armes, coratge inquebrantable i l'enginy de generals astuts.",
+        "setup_instructions": [
+            "Si les taules han estat configurades per l'organitzador, passa directament al desplegament. Si els jugadors estan configurant el terreny, col·loca i dispersa el terreny."
+        ],
+        "deployment_instructions": [
+            "Una vegada que el camp de batalla ha estat configurat, el guanyador d'una tirada tria la seva zona de desplegament (A o B), com es mostra en el mapa a continuació. Una vegada triades les zones de desplegament, el guanyador d'aquesta tirada desplega la primera unitat. Els jugadors despleguen els seus exèrcits usant el mètode d'unitats alternes."
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_random",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-scenario-1.jpg",
+        "recommended_objectives": [
+            "baggage_trains",
+            "special_features",
+            "domination",
+            "strategic_locations_2",
+            "strategic_locations_3",
+            "strategic_locations_4"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Batalla cara a cara entre dos exèrcits, amb el camp de batalla dividit en dues zones iguals."
+    },
+    {
+        "id": "s2",
+        "name": "Rei de la Colina",
+        "description": "Controlar un terreny elevat no només proporciona una vista dominant del camp de batalla, sinó que una colina estratègicament ubicada pot servir com una base d'operacions fàcilment defensable, una que pot esdevenir una posició gairebé inexpugnable.",
+        "setup_instructions": [
+            "Si les taules han estat configurades per l'organitzador, passa directament al desplegament. Si els jugadors estan configurant el terreny, col·loca i dispersa el terreny com es descriu a la pàgina 16. En qualsevol cas, assegura't que una única colina gran (que no mesuri més de 12\" x 18\") es col·loqui al centre del camp de batalla. Una vegada col·locada, aquesta colina no es dispersa."
+        ],
+        "deployment_instructions": [
+            "Una vegada que el camp de batalla ha estat configurat, el guanyador d'una tirada tria la seva zona de desplegament (A o B), com es mostra en el mapa a continuació. Una vegada triades les zones de desplegament, el guanyador d'aquesta tirada desplega la primera unitat. Els jugadors despleguen els seus exèrcits usant el mètode d'unitats alternes."
+        ],
+        "game_length": [
+            "gl_random",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-scenario-2.jpg",
+        "special_rules": [
+            {
+                "title": "La Colina",
+                "description": "En aquest escenari, la colina pot ser controlada al final de cada torn per una única unitat de Tropa que estigui a 9\" o menys del seu centre (el centre del camp de batalla), que tingui una Força d'Unitat de 10 o més, que no estigui fugint i que no hagi sucumbit a Estupidesa. Si dues o més unitats elegibles estan a 9\" o menys del centre de la colina, la unitat més propera la controla. Si dues o més unitats elegibles estan igualment prop del centre de la colina, la unitat amb major Força d'Unitat la controla. No obstant això, si dues o més unitats enemigues elegibles estan igualment prop del centre de la colina i ambdues tenen la mateixa Força d'Unitat, la colina està 'disputada' i cap unitat la controla."
+            },
+            {
+                "title": "Corrent costa amunt",
+                "description": "Els moviments de Vanguarda no es poden realitzar en aquest escenari."
+            }
+        ],
+        "main_objectives": [
+            "control_hill"
+        ],
+        "recommended_objectives": [
+            "baggage_trains",
+            "special_features"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Controla la colina el més aviat possible i defensa-la amb la teva vida!"
+    },
+    {
+        "id": "s3",
+        "name": "Línies de batalla traçades",
+        "description": "Quan la victòria o la derrota absoluta depenen del resultat d'una sola batalla, els generals poden ser temptats a traçar línies de batalla i unir-se a la lluita abans que els seus exèrcits s'hagin reunit per complet. En tals circumstàncies, aquells compromesos amb la batalla han d'esperar que els reforços arribin de manera oportuna.",
+        "setup_instructions": [
+            "Si les taules han estat configurades per l'organitzador, passa directament al desplegament. Si els jugadors estan configurant el terreny, col·loca i dispersa el terreny."
+        ],
+        "deployment_instructions": [
+            "Una vegada que el camp de batalla ha estat configurat, el guanyador d'una tirada tria la seva zona de desplegament (A o B), com es mostra en el mapa a continuació. Abans de desplegar el seu exèrcit, cada jugador tira un D6. Si qualsevol dels dos jugadors treu un 1, ambdós jugadors han de triar una sola unitat del seu exèrcit el tipus de tropa del qual sigui infanteria o cavalleria per ser mantinguda en reserva (veure a continuació).",
+            "Una vegada que s'ha fet aquesta tirada, el jugador que va guanyar la tirada per triar les zones de desplegament, desplega la primera unitat. Les unitats que no es mantenen en reserva poden ser desplegades usant el mètode d'unitats alternes, com es descriu a la pàgina 17. Durant el desplegament, els personatges poden unir-se a unitats que es mantenen en reserva com a resultat de la regla especial de l'escenari. En altres paraules, qualsevol personatge que pugui unir-se a una unitat pot ser mantingut en reserva, sempre que s'uneixi a una unitat."
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_random"
+        ],
+        "localImage": "matched-play-scenario-3.jpg",
+        "special_rules": [
+            {
+                "title": "Reserves",
+                "description": "Les reserves no es despleguen al començament de la batalla. En canvi, poden entrar en joc durant la subfase de Moviments Obligatoris de qualsevol torn de l'elecció del jugador que les controla, que no sigui el primer. Quan arriben, les reserves poden entrar en el camp de batalla com a reforços, des de qualsevol punt en una vora del camp de batalla dins de la seva zona de desplegament."
+            }
+        ],
+        "main_objectives": [
+            "strategic_locations_3"
+        ],
+        "recommended_objectives": [
+            "domination",
+            "baggage_trains"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Batalla cara a cara entre dos exèrcits, amb el camp de batalla dividit en dues zones iguals amb desplegament des de les cantonades."
+    },
+    {
+        "id": "s4",
+        "name": "Enfrontament Pròxim",
+        "description": "Incomptables són les batalles vicioses i sagnants que s'han lliurat en els estrets passos de muntanya del Vell Món, on els exèrcits es veuen obligats a trobar-se de front. Amb poc espai per maniobrar i la retirada com una opció perillosa, guerrers de rostre ombrívol xoquen al so de l'acer i els crits de batalla ressonants.",
+        "setup_instructions": [
+            "Si les taules han estat configurades per l'organitzador, passa directament al desplegament. Si els jugadors estan configurant el terreny, col·loca i dispersa el terreny."
+        ],
+        "deployment_instructions": [
+            "Una vegada que el camp de batalla ha estat configurat, el guanyador d'una tirada tria la seva zona de desplegament (A o B), com es mostra en el mapa a continuació. Una vegada triades les zones de desplegament, el guanyador d'aquesta tirada desplega la primera unitat. Els jugadors despleguen els seus exèrcits usant el mètode d'unitats alternes."
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-scenario-4.jpg",
+        "special_rules": [
+            {
+                "title": "Coll d'ampolla",
+                "description": "La batalla es lliura en un estret pas de muntanya tancat per alts penya-segats. A causa d'això, les vores curtes del camp de batalla compten com a terreny intransitable. Com a tal, cap unitat (incloent unitats que fugen o qualsevol que arribi de la reserva) pot sortir o entrar en el camp de batalla a través de cap de les vores curtes tret que tinguin la regla especial Etèria o Volar (X)."
+            }
+        ],
+        "main_objectives": [
+            "strategic_locations_2"
+        ],
+        "recommended_objectives": [
+            "domination"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Batalla cara a cara entre dos exèrcits, amb el camp de batalla dividit en dues zones iguals amb el desplegament reduït al centre de la vora de cada zona."
+    },
+    {
+        "id": "s5",
+        "name": "Una trobada casual",
+        "description": "Ja sigui per sort, desgràcia o circumstàncies estranyes, dos exèrcits enemics es topen l'un amb l'altre en la boira de la guerra. Ambdues forces s'afanyen a preparar-se per a la batalla i defensar les seves línies de subministrament, ansioses per aprofitar l'oportunitat d'assestar un cop significatiu als seus enemics si poden reunir les seves forces a temps.",
+        "setup_instructions": [
+            "Si les taules han estat configurades per l'organitzador, passa directament al desplegament. Si els jugadors estan configurant el terreny, col·loca i dispersa el terreny."
+        ],
+        "deployment_instructions": [
+            "Una vegada que el camp de batalla ha estat configurat, el guanyador d'una tirada tria la seva zona de desplegament (A1, A2, B1 o B2), com es mostra en el mapa a continuació. Si el guanyador de la tirada tria una zona de desplegament marcada amb 'A', llavors el seu oponent usarà la zona de desplegament oposada, també marcada amb 'A'. Si el guanyador de la tirada tria una zona de desplegament marcada amb 'B', llavors el seu oponent usarà la zona de desplegament oposada, també marcada amb 'B'. Una vegada triades les zones de desplegament, el guanyador d'aquesta tirada desplega la primera unitat. Els jugadors despleguen els seus exèrcits usant el mètode d'unitats alternes."
+        ],
+        "game_length": [
+            "gl_random",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-scenario-5.jpg",
+        "main_objectives": [
+            "special_features"
+        ],
+        "recommended_objectives": [
+            "domination",
+            "baggage_trains"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Una batalla cara a cara entre dos exèrcits, amb zones de desplegament creuades que fan del centre una zona de guerra sagnant."
+    },
+    {
+        "id": "s6",
+        "name": "Encerclament",
+        "description": "Mentre molts generals creuen que la glòria es pot guanyar travessant el cor de l'enemic, altres intentaran flanquejar i encerclar els seus enemics, aixafant els flancs de l'enemic sota l'avanç implacable del seu exèrcit.",
+        "setup_instructions": [
+            "Si les taules han estat configurades per l'organitzador, passa directament al desplegament. Si els jugadors estan configurant el terreny, col·loca i dispersa el terreny."
+        ],
+        "deployment_instructions": [
+            "Una vegada que el camp de batalla ha estat configurat, el guanyador d'una tirada tria la seva zona de desplegament (A o B), com es mostra en el mapa a continuació. Una vegada triades les zones de desplegament, el guanyador d'aquesta tirada desplega la primera unitat. Els jugadors despleguen els seus exèrcits usant el mètode d'unitats alternes."
+        ],
+        "localImage": "matched-play-scenario-6.jpg",
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_random"
+        ],
+        "main_objectives": [
+            "strategic_locations_4"
+        ],
+        "recommended_objectives": [
+            "baggage_trains",
+            "special_features"
+        ],
+        "tags": [
+            "single",
+            "official"
+        ],
+        "summary": "Batalla cara a cara entre dos exèrcits, amb les àrees de desplegament lleugerament desplaçades de la línia del front."
+    },
+    {
+        "id": "d1",
+        "name": "Doble embolcall",
+        "description": "Mentre dos generals alineen els seus guerrers per a la batalla, els seus aliats corren cap al camp. Amb les línies de batalla ben i veritablement confuses, els amics han de lluitar a través de l'enemic per reagrupar-se i establir una aparença d'ordre.",
+        "setup_instructions": [
+            "Si les taules han estat configurades per l'organitzador, passa directament al desplegament. Si els jugadors estan configurant el terreny, col·loca i dispersa el terreny."
+        ],
+        "deployment_instructions": [
+            "Una vegada que el camp de batalla ha estat configurat, el guanyador d'una tirada tria la seva zona de desplegament (A o B), com es mostra en el mapa a continuació. Una vegada triades les zones de desplegament, el guanyador d'aquesta tirada desplega la primera unitat, pertanyent a la força primària del seu equip. Els jugadors despleguen les seves forces primàries usant el mètode d'unitats alternes. Les forces secundàries d'ambdós equips es mantenen en reserva com a la imatge."
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-doubles-scenario-1.jpg",
+        "special_rules": [
+            {
+                "title": "Reserves",
+                "description": "Les reserves no es despleguen al començament de la batalla. En canvi, poden entrar en joc durant la subfase de Moviments Obligatoris de qualsevol torn, incloent-hi el primer, de l'elecció del seu jugador controlador. Quan arriben, les reserves entraran en el camp de batalla des de la vora curta del camp de batalla indicada en el mapa de desplegament a continuació. No obstant això, si el seu jugador controlador ho desitja, les màquines de guerra que pertanyen a la força secundària poden desplegar-se amb la força primària en el seu lloc."
+            }
+        ],
+        "recommended_objectives": [
+            "baggage_trains",
+            "special_features",
+            "domination",
+            "strategic_locations_3",
+            "strategic_locations_4"
+        ],
+        "tags": [
+            "double",
+            "official"
+        ],
+        "summary": "Batalla cara a cara entre dos exèrcits, amb el camp de batalla dividit en dues zones iguals."
+    },
+    {
+        "id": "d2",
+        "name": "Línies de batalla avançades",
+        "description": "Tot i que la vanguarda d'un exèrcit sovint alberga als seus guerrers millors i més forts, rarament són els primers a mullar les seves espases quan es troba la batalla. Les unitats d'exploradors i cavalleria lleugera es dediquen a escaramusses ràpides com el llamp en la vora de la batalla, molt abans que les formacions pesades d'infanteria s'acostin unes a altres.",
+        "setup_instructions": [
+            "Si les taules han estat configurades per l'organitzador, passa directament al desplegament. Si els jugadors estan configurant el terreny, col·loca i dispersa el terreny."
+        ],
+        "deployment_instructions": [
+            "Una vegada que el camp de batalla ha estat configurat, el guanyador d'una tirada tria la seva zona de desplegament (A o B), com es mostra en el mapa a continuació. Una vegada triades les zones de desplegament, el guanyador d'aquesta tirada desplega la primera unitat. Els jugadors despleguen els seus exèrcits usant el mètode d'unitats alternes."
+        ],
+        "game_length": [
+            "gl_fixed_at_6",
+            "gl_random"
+        ],
+        "localImage": "matched-play-doubles-scenario-2.jpg",
+        "recommended_objectives": [
+            "baggage_trains",
+            "strategic_locations_2",
+            "strategic_locations_3"
+        ],
+        "tags": [
+            "double",
+            "official"
+        ],
+        "summary": "Batalla cara a cara entre dos exèrcits, amb el camp de batalla dividit en dues zones iguals amb desplegament des de les cantonades."
+    },
+    {
+        "id": "d3",
+        "name": "L'antic lloc d'avançada",
+        "description": "Encara que aquesta torre envellida ha estat abandonada fa molt de temps, una vegada va ser una talaia vital la guarnició de la qual vigilava la terra per llegües en cada direcció. Ara, mentre la guerra una vegada més plaga la regió, la vista dominant de la vella torre sobre el camp circumdant és una cosa que cap força pot permetre's cedir sense una lluita.",
+        "setup_instructions": [
+            "Si les taules han estat configurades per l'organitzador, passa directament al desplegament. Si els jugadors estan configurant el terreny, col·loca i dispersa el terreny com es descriu a la pàgina 16. En qualsevol cas, assegura't que una única característica especial, que representi el lloc d'avançada abandonat, es col·loqui al centre del camp de batalla."
+        ],
+        "deployment_instructions": [
+            "Una vegada que el camp de batalla ha estat configurat, el guanyador d'una tirada tria la seva zona de desplegament (A o B), com es mostra en el mapa a continuació. Una vegada triades les zones de desplegament, el guanyador d'aquesta tirada desplega la primera unitat. Els jugadors despleguen els seus exèrcits usant el mètode d'unitats alternes."
+        ],
+        "game_length": [
+            "gl_random",
+            "gl_break_point"
+        ],
+        "localImage": "matched-play-doubles-scenario-3.jpg",
+        "main_objectives": [
+            "special_features"
+        ],
+        "recommended_objectives": [
+            "baggage_trains",
+            "strategic_locations_4"
+        ],
+        "tags": [
+            "double",
+            "official"
+        ],
+        "summary": "Batalla cara a cara entre dos exèrcits, amb el camp de batalla dividit en dues zones iguals amb el desplegament reduït al centre de la vora de cada zona."
+    }
+]

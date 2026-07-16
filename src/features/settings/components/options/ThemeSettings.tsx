@@ -14,17 +14,16 @@ const ThemeSettings = () => {
   };
 
   return (
-
     <SettingsRow label={t("theme.title")}>
       <DropDownSelect
         onSelect={(value: string) => changeTheme(value as ThemeMode)}
-        placeholder={t(`theme.${mode}`) || t('theme.select')}
+        placeholder={t("theme.select")}
         options={Object.values(ThemeMode).map((themeOption) => ({
           value: themeOption,
           label: t(`theme.${themeOption}`),
         }))}
-        selected={t(`theme.${mode}`)}>
-      </DropDownSelect>
+        selected={mode}
+      />
     </SettingsRow>
   );
 };

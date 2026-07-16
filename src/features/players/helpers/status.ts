@@ -1,4 +1,4 @@
-import { Unit } from "../types/unit";
+import { Unit } from "../../armies/types/Unit";
 
 /**
  * Returns the threshold for the unit to be considered as being below the quarter
@@ -25,4 +25,3 @@ export function isUnitLesserOrEqualToQuarter(unit: Unit, currentSize: number): b
     }
     return currentSize <= threshold;
 }
-

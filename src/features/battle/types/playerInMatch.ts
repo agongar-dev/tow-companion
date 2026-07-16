@@ -1,4 +1,4 @@
-import { ArmySnapshot } from "../../players/types/army";
+import { ArmySnapshot } from "./ArmySnapshot";
 
 export type PlayerInMatch = {
   playerId: string;

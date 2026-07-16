@@ -1,4 +1,4 @@
-import { Unit } from "../types/unit";
+import { Unit } from "../../armies/types/Unit";
 
 /**
  * Calculates the value of a unit

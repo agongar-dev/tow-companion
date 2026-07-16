@@ -3,7 +3,6 @@ import { Player } from "../types/player";
 import { ArmyList } from "../../armies/types/ArmyList";
 import PlayerListItem from "./PlayerListItem";
 
-
 type PlayerListProps = {
     players: Player[];
     armies: Record<string, ArmyList>;
@@ -17,7 +16,9 @@ const PlayerList: React.FC<PlayerListProps> = ({ players, armies, onSelect }) =>
                 data={players}
                 keyExtractor={(player) => player.id}
                 renderItem={({ item }) => {
-                    const army = item.armyId ? armies[item.armyId] : undefined;
+                    const primaryArmyId = item.armyIds?.[0];
+                    const army = primaryArmyId ? armies[primaryArmyId] : undefined;
+
                     return (
                         <PlayerListItem
                             player={item}

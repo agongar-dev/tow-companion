@@ -1,4 +1,4 @@
-import { UnitStatus } from "../../../players/types/unit";
+import { UnitStatus } from "../../../armies/types/Unit";
 import { ObjectiveStatus } from "../objective";
 
 export enum MatchResult {

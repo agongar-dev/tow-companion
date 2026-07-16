@@ -1,0 +1,119 @@
+[
+    {
+        "id": "open_ground",
+        "name": "Terreny Obert",
+        "description": "Terreny per defecte sense efectes especials",
+        "rulesMovement": [
+            "Tractat com a terreny obert (sense penalitzacions)"
+        ]
+    },
+    {
+        "id": "difficult_terrain",
+        "name": "Terreny Difícil",
+        "description": "Terreny que redueix el moviment i desorganitza les unitats",
+        "rulesMovement": [
+            "-1 a la característica de Moviment (mínim 1).",
+            "Les unitats que carreguen tiren 2D6 i descarten el resultat més alt."
+        ],
+        "rulesCloseCombat": [
+            "Les unitats amb un 25% o més de miniatures en terreny difícil estan Desorganitzades i no poden reclamar Bo per Files."
+        ]
+    },
+    {
+        "id": "dangerous_terrain",
+        "name": "Terreny Perillós",
+        "description": "Terreny perillós que pot ferir les miniatures.",
+        "rulesMovement": [
+            "-1 a la característica de Moviment (mínim 1).",
+            "Les unitats que carreguen tiren 2D6 i descarten el resultat més alt.",
+            "Les miniatures que es mouen a través han de fer una prova de Terreny Perillós (D6: amb 1, pateixen 1 Ferida).",
+            "Cada miniatura ha de fer una prova per cada element de terreny perillós que travessi."
+        ],
+        "rulesCloseCombat": [
+            "Les unitats amb un 25% o més de miniatures en terreny difícil estan Desorganitzades i no poden reclamar Bo per Files."
+        ]
+    },
+    {
+        "id": "impassable",
+        "name": "Terreny Infranquejable",
+        "description": "Obstacles que no es poden travessar",
+        "rulesMovement": [
+            "Les unitats no poden moure’s a través del terreny infranquejable; l’han de rodejar."
+        ],
+        "rulesCloseCombat": [
+            "Si el terreny infranquejable impedeix l’alineació durant una càrrega, la càrrega compta com a desorganitzada."
+        ]
+    },
+    {
+        "id": "low_linear_obstacle",
+        "name": "Obstacle Lineal Baix",
+        "description": "Obstacles de menys de 2\" d’alçada (murs, tanques, rases, etc.)",
+        "rulesMovement": [
+            "-1 a la característica de Moviment (mínim 1).",
+            "Les unitats que carreguen tiren 2D6 i descarten el resultat més alt."
+        ],
+        "rulesCloseCombat": [
+            "Les unitats que es troben sobre un obstacle lineal baix estan Desorganitzades (sense Bo per Files).",
+            "Carregar contra un obstacle lineal baix defensat provoca una càrrega Desorganitzada a menys que la unitat tingui Volar (X)."
+        ]
+    },
+    {
+        "id": "high_linear_obstacle",
+        "name": "Obstacle Lineal Alt",
+        "description": "Obstacles de 2\" o més d’alçada (edificis, murs de castell, fortificacions, etc.)",
+        "rulesMovement": [
+            "Les unitats no poden moure’s a través del terreny infranquejable; l’han de rodejar."
+        ],
+        "rulesCloseCombat": [
+            "Si el terreny infranquejable impedeix l’alineació durant una càrrega, la càrrega compta com a desorganitzada."
+        ]
+    },
+    {
+        "id": "woods",
+        "name": "Boscos",
+        "description": "Boscos que dificulten el moviment i obstrueixen la visió.",
+        "rulesMovement": [
+            "Poden comptar com a terreny difícil, perillós o infranquejable depenent de la densitat."
+        ],
+        "rulesCloseCombat": [
+            "Les unitats parcialment dins compten com si tinguessin cobertura."
+        ],
+        "rulesLineOfSight": [
+            "Les miniatures darrere o dins d’un bosc tenen cobertura parcial.",
+            "Si cap miniatura és dins, la línia de visió no pot travessar el bosc."
+        ]
+    },
+    {
+        "id": "hill",
+        "name": "Turó",
+        "description": "Terreny elevat que proporciona avantatges tàctics",
+        "rulesMovement": [
+            "Tractat com a terreny obert."
+        ],
+        "rulesCloseCombat": [
+            "La unitat que manté la posició elevada obté un bo en combat."
+        ],
+        "rulesShooting": [
+            "La unitat en un turó pot disparar amb una fila addicional."
+        ],
+        "rulesLineOfSight": [
+            "Les unitats en un turó poden veure per sobre d’altres que no hi són.",
+            "Les unitats en un turó poden ser vistes més fàcilment.",
+            "Un turó bloqueja la línia de visió per a les unitats darrere seu, llevat que també estiguin al turó."
+        ]
+    },
+    {
+        "id": "battlefield_decoration",
+        "name": "Decoració de Camp de Batalla",
+        "description": "Petites peces d’escenografia decorativa (<2\").",
+        "rulesMovement": [
+            "Ignorades per al moviment."
+        ],
+        "rulesCloseCombat": [
+            "Ignorades per al combat."
+        ],
+        "rulesLineOfSight": [
+            "Poden enfosquir la línia de visió."
+        ]
+    }
+]

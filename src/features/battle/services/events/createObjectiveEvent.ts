@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "react-native-uuid/dist/v4";
-import { MatchEvent } from "../types/events/matchEvent";
-import { ObjectiveStatus } from "../types/objective";
+import { MatchEvent } from "../../types/event/matchEvent";
+import { ObjectiveStatus } from "../../types/objective";
 /**
  * Creates an objective achieved event
  * @param objectiveId the id of the objective

@@ -1,0 +1,234 @@
+[
+    {
+        "id": "baggage_trains",
+        "name": "Trenes de bagaje",
+        "description": [
+            "La destrucción del tren de suministros de un ejército puede detener una campaña por completo mientras los soldados sucumben a la necesidad de encontrar comida y agua fresca. Para representar esto, los trenes de bagaje pueden usarse como un objetivo secundario.",
+            "Un tren de bagaje debe ser representado por un diorama en miniatura que ocupe una base de 60 x 100 mm. Los trenes de bagaje son tratados como terreno peligroso a efectos de movimiento, pero son ignorados a efectos de línea de visión."
+        ],
+        "objective_rules": [
+            {
+                "tittle": "Colocación de los trenes de bagaje",
+                "description": [
+                    "Los trenes de bagaje se colocan después de que se ha configurado el campo de batalla, pero antes de que comience el despliegue. Cada jugador coloca su tren de bagaje en el campo de batalla de manera que esté completamente dentro de su zona de despliegue y al menos a 3\" de cualquier borde del campo de batalla. Los trenes de bagaje no pueden colocarse dentro de un rasgo de terreno de cualquier tipo o a horcajadas de un obstáculo lineal bajo.",
+                    "Una vez colocado en el campo de batalla, un tren de bagaje no puede ser movido por ninguna razón."
+                ]
+            },
+            {
+                "tittle": "Controlando el bagaje",
+                "description": "Un tren de bagaje puede ser controlado por una única unidad que esté a 6\" o menos de él, que tenga una Fuerza de Unidad de 10 o más, que no esté huyendo y que no haya sucumbido a Estupidez. Si dos o más unidades elegibles están a 6\" o menos de un tren de bagaje, la unidad más cercana lo controla. Sin embargo, si dos o más unidades enemigas elegibles están igualmente cerca, el tren de bagaje está 'disputado' y ninguna unidad lo controla."
+            },
+            {
+                "tittle": "Destruyendo el bagaje",
+                "description": [
+                    "Una unidad con una Fuerza de Unidad de 5 o más puede intentar destruir el tren de bagaje del enemigo moviéndose en contacto base con él durante la subfase de Movimientos Restantes. Una vez que una unidad está en contacto base con el tren de bagaje del enemigo, comienza el proceso de destruirlo, destrozando ruedas de carro, haciendo que los asistentes del campamento huyan a las colinas y prendiendo fuego a los suministros. Mientras una unidad está en contacto base con el tren de bagaje del enemigo no puede disparar y solo puede lanzar hechizos con un alcance de 'Combate' o 'Propio'.",
+                    "Si, al comienzo de su siguiente subfase de Inicio de Turno, la unidad todavía está en contacto base con el tren de bagaje, tiene una Fuerza de Unidad de 5 o más, no está en combate y no está huyendo, el bagaje es destruido y retirado del campo de batalla."
+                ]
+            }
+        ],
+        "image": "baggage_trains",
+        "victory_conditions": [
+            {
+                "id": "baggage_trains_controlled",
+                "description": "Por cada tren de bagaje controlado",
+                "points": 100,
+                "is_repeatable": true,
+                "score_timing": "end_of_turn"
+            },
+            {
+                "id": "baggage_trains_destroyed",
+                "description": "Por el tren de bagaje del enemigo destruido",
+                "points": 250,
+                "is_repeatable": false,
+                "score_timing": "end_of_turn"
+            }
+        ],
+        "type": "secondary",
+        "summary": "Protege tus trenes de bagaje de los ataques enemigos y destruye los del enemigo."
+    },
+    {
+        "id": "special_features",
+        "name": "Características especiales",
+        "description": [
+            "En los escenarios de juego emparejado, una característica especial es un rasgo de terreno que representa un hito importante en el campo de batalla. Esto podría ser una gran estatua que represente a héroes nobles, un monolito arcano erigido para canalizar energía mágica, o alguna otra torre de origen desconocido. Para representar tal hito, una característica especial puede usarse como un objetivo secundario.",
+            "Una característica especial es un rasgo de terreno que no mide más de 6\" en su punto más ancho. Todas las características especiales son terreno intransitable sobre el cual no se puede trazar una línea de visión."
+        ],
+        "objective_rules": [
+            {
+                "tittle": "Colocación de una característica especial",
+                "description": "Las características especiales se colocan al configurar el campo de batalla. Una característica especial debe ser colocada en el centro del campo de batalla. Una vez colocada, una característica especial no se dispersa."
+            },
+            {
+                "tittle": "Controlando una característica especial",
+                "description": "Durante cada subfase de Inicio de Turno, una característica especial puede ser controlada por una única unidad Básica que esté a 6\" o menos de ella, que tenga una Fuerza de Unidad de 10 o más, que no esté huyendo y que no haya sucumbido a Estupidez. Si dos o más unidades elegibles están a 6\" o menos de una característica especial, la unidad más cercana la controla. Si dos o más unidades elegibles están igualmente cerca de una característica especial, la unidad con la Fuerza de Unidad más alta la controla. Sin embargo, si dos o más unidades enemigas elegibles están igualmente cerca de una característica especial y ambas tienen la misma Fuerza de Unidad, la característica especial está 'disputada' y ninguna unidad la controla."
+            },
+            {
+                "tittle": "REGLAS ESPECIALES - Propiedades inusuales",
+                "description": [
+                    "Las características especiales están poseídas de propiedades siempre cambiantes y altamente inusuales. Durante cualquier subfase de Inicio de Turno en la que se determine que una unidad está en control de una característica especial, el jugador que controla esa unidad tira en la tabla a continuación para determinar la propiedad inusual actual de la característica especial. La unidad controladora se beneficia de esa propiedad inusual hasta el final de ese turno:",
+                    "1-2 => Un cosquilleo en el aire: El aire alrededor de la característica especial cosquillea extrañamente, y aquellos que se paran demasiado cerca informan de un sabor divertido en sus bocas. Mientras una unidad controla esta característica especial, gana Resistencia Mágica (-3).",
+                    "3-4 => Honra a tus ancestros: Llenos de un sentido de orgullo justo por la vista de esta característica especial, aquellos que la controlan la defenderán vigorosamente. Mientras una unidad controla esta característica especial, gana la regla especial Odio (todos los enemigos).",
+                    "5-6 => Una vista inspiradora: La característica especial llena a todos los que la miran con coraje y los inspira a actos de valentía aún mayores. Mientras una unidad controla esta característica especial, gana la regla especial Irrompible."
+                ]
+            }
+        ],
+        "image": "special_features",
+        "victory_conditions": [
+            {
+                "id": "special_features_controlled",
+                "description": "Por cada característica especial controlada",
+                "points": 200,
+                "is_repeatable": true,
+                "score_timing": "end_of_battle"
+            }
+        ],
+        "type": "secondary",
+        "summary": "Control de hitos importantes en el campo de batalla."
+    },
+    {
+        "id": "domination",
+        "name": "Dominación",
+        "description": [
+            "Romper al enemigo, expulsarlo del campo de batalla y obligarlo a huir a las colinas distantes es la forma más segura para que un ejército gane el día. Para representar esto, la Dominación puede usarse como un objetivo secundario. Si es así, el campo de batalla se divide en cuatro cuartos iguales dibujando cuatro líneas imaginarias - dos desde el medio de los dos bordes largos del tablero, y dos desde el medio de los dos bordes cortos - que se encuentran en el centro del campo de batalla, como se muestra en la imagen opuesta."
+        ],
+        "objective_rules": [
+            {
+                "tittle": "Controlando un cuarto",
+                "description": "El control de cada cuarto del campo de batalla se determina al final del juego. Para hacer esto, los jugadores suman la Fuerza de Unidad de cada uno de sus modelos que está completamente dentro de cada cuarto, sin contar los modelos que huyen. El jugador que tiene la mayor Fuerza de Unidad dentro de un cuarto lo controla."
+            }
+        ],
+        "image": "domination",
+        "victory_conditions": [
+            {
+                "id": "quarters_controlled",
+                "description": "Por cada cuarto controlado",
+                "points": 100,
+                "is_repeatable": true,
+                "score_timing": "end_of_battle"
+            },
+            {
+                "id": "strength_superiority",
+                "description": "Si la Fuerza de Unidad de los modelos que controlan un cuarto es más del doble que la del enemigo, gana 50 PV adicionales.",
+                "points": 50,
+                "is_repeatable": true,
+                "score_timing": "end_of_battle"
+            },
+            {
+                "id": "supremacy",
+                "description": "Si no hay unidades enemigas capaces de controlar un cuarto, gana 100 PV adicionales.",
+                "points": 100,
+                "is_repeatable": true,
+                "score_timing": "end_of_battle"
+            }
+        ],
+        "type": "secondary",
+        "summary": "Controla todos los cuartos que puedas."
+    },
+    {
+        "id": "strategic_locations_2",
+        "name": "Ubicaciones estratégicas (2)",
+        "description": [
+            "Controlar puntos clave en el campo de batalla es vital para el éxito en la guerra. Para representar esto, las Ubicaciones Estratégicas (X) pueden usarse como un objetivo secundario. Si es así, se colocan en el campo de batalla un número de marcadores de objetivo igual al número que se muestra entre paréntesis (aquí mostrado como 'X').",
+            "Los marcadores de objetivo deben ser representados por un diorama en miniatura que ocupe una base redonda de 40 mm. Los marcadores de objetivo son un tipo de decoración del campo de batalla, y pueden representar muchas cosas, desde pozos que ofrecen agua fresca a guerreros sedientos, hasta tesoros que prometen riqueza a los comandantes victoriosos, desde mensajeros que llevan información vital a espías que esperan escapar con secretos preciosos."
+        ],
+        "objective_rules": [
+            {
+                "tittle": "Colocación de marcadores de objetivo",
+                "description": "Los marcadores de objetivo se colocan después de que el campo de batalla ha sido configurado pero antes de que comience el despliegue, pero nunca pueden ser colocados a 3\" o menos de un rasgo de terreno o a horcajadas de un obstáculo lineal bajo. Si es necesario, mueve el terreno por la menor cantidad posible para permitir que el marcador de objetivo sea colocado."
+            },
+            {
+                "tittle": "Controlando los marcadores de objetivo",
+                "description": "Al final de cada turno, un marcador de objetivo puede ser controlado por una única unidad Básica que esté a 6\" o menos de él, que tenga una Fuerza de Unidad de 10 o más, que no esté huyendo y que no haya sucumbido a Estupidez. Si dos o más unidades elegibles están a 6\" o menos de un marcador de objetivo, la unidad más cercana lo controla. Si dos o más unidades elegibles están igualmente cerca de un marcador de objetivo, la unidad con la Fuerza de Unidad más alta lo controla. Sin embargo, si dos o más unidades enemigas elegibles están igualmente cerca de un marcador de objetivo y ambas tienen la misma Fuerza de Unidad, el marcador de objetivo está 'disputado' y ninguna unidad lo controla."
+            }
+        ],
+        "image": "strategic_locations_2",
+        "victory_conditions": [
+            {
+                "id": "strategic_locations_controlled",
+                "description": "Por cada ubicación estratégica controlada",
+                "points": 30,
+                "is_repeatable": true,
+                "score_timing": "end_of_turn"
+            }
+        ],
+        "type": "secondary",
+        "summary": "Controla tantas ubicaciones estratégicas como sea posible."
+    },
+    {
+        "id": "strategic_locations_3",
+        "name": "Ubicaciones estratégicas (3)",
+        "description": [
+            "Controlar puntos clave en el campo de batalla es vital para el éxito en la guerra. Para representar esto, las Ubicaciones Estratégicas (X) pueden usarse como un objetivo secundario. Si es así, se colocan en el campo de batalla un número de marcadores de objetivo igual al número que se muestra entre paréntesis (aquí mostrado como 'X').",
+            "Los marcadores de objetivo deben ser representados por un diorama en miniatura que ocupe una base redonda de 40 mm. Los marcadores de objetivo son un tipo de decoración del campo de batalla, y pueden representar muchas cosas, desde pozos que ofrecen agua fresca a guerreros sedientos, hasta tesoros que prometen riqueza a los comandantes victoriosos, desde mensajeros que llevan información vital a espías que esperan escapar con secretos preciosos."
+        ],
+        "objective_rules": [
+            {
+                "tittle": "Colocación de marcadores de objetivo",
+                "description": "Los marcadores de objetivo se colocan después de que el campo de batalla ha sido configurado pero antes de que comience el despliegue, pero nunca pueden ser colocados a 3\" o menos de un rasgo de terreno o a horcajadas de un obstáculo lineal bajo. Si es necesario, mueve el terreno por la menor cantidad posible para permitir que el marcador de objetivo sea colocado."
+            },
+            {
+                "tittle": "Controlando los marcadores de objetivo",
+                "description": "Al final de cada turno, un marcador de objetivo puede ser controlado por una única unidad Básica que esté a 6\" o menos de él, que tenga una Fuerza de Unidad de 10 o más, que no esté huyendo y que no haya sucumbido a Estupidez. Si dos o más unidades elegibles están a 6\" o menos de un marcador de objetivo, la unidad más cercana lo controla. Si dos o más unidades elegibles están igualmente cerca de un marcador de objetivo, la unidad con la Fuerza de Unidad más alta lo controla. Sin embargo, si dos o más unidades enemigas elegibles están igualmente cerca de un marcador de objetivo y ambas tienen la misma Fuerza de Unidad, el marcador de objetivo está 'disputado' y ninguna unidad lo controla."
+            }
+        ],
+        "image": "strategic_locations_3",
+        "victory_conditions": [
+            {
+                "id": "strategic_locations_controlled",
+                "description": "Por cada ubicación estratégica controlada",
+                "points": 30,
+                "is_repeatable": true,
+                "score_timing": "end_of_turn"
+            }
+        ],
+        "type": "secondary",
+        "summary": "Controla tantas ubicaciones estratégicas como sea posible."
+    },
+    {
+        "id": "strategic_locations_4",
+        "name": "Ubicaciones estratégicas (4)",
+        "description": [
+            "Controlar puntos clave en el campo de batalla es vital para el éxito en la guerra. Para representar esto, las Ubicaciones Estratégicas (X) pueden usarse como un objetivo secundario. Si es así, se colocan en el campo de batalla un número de marcadores de objetivo igual al número que se muestra entre paréntesis (aquí mostrado como 'X').",
+            "Los marcadores de objetivo deben ser representados por un diorama en miniatura que ocupe una base redonda de 40 mm. Los marcadores de objetivo son un tipo de decoración del campo de batalla, y pueden representar muchas cosas, desde pozos que ofrecen agua fresca a guerreros sedientos, hasta tesoros que prometen riqueza a los comandantes victoriosos, desde mensajeros que llevan información vital a espías que esperan escapar con secretos preciosos."
+        ],
+        "objective_rules": [
+            {
+                "tittle": "Colocación de marcadores de objetivo",
+                "description": "Los marcadores de objetivo se colocan después de que el campo de batalla ha sido configurado pero antes de que comience el despliegue, pero nunca pueden ser colocados a 3\" o menos de un rasgo de terreno o a horcajadas de un obstáculo lineal bajo. Si es necesario, mueve el terreno por la menor cantidad posible para permitir que el marcador de objetivo sea colocado."
+            },
+            {
+                "tittle": "Controlando los marcadores de objetivo",
+                "description": "Al final de cada turno, un marcador de objetivo puede ser controlado por una única unidad Básica que esté a 6\" o menos de él, que tenga una Fuerza de Unidad de 10 o más, que no esté huyendo y que no haya sucumbido a Estupidez. Si dos o más unidades elegibles están a 6\" o menos de un marcador de objetivo, la unidad más cercana lo controla. Si dos o más unidades elegibles están igualmente cerca de un marcador de objetivo, la unidad con la Fuerza de Unidad más alta lo controla. Sin embargo, si dos o más unidades enemigas elegibles están igualmente cerca de un marcador de objetivo y ambas tienen la misma Fuerza de Unidad, el marcador de objetivo está 'disputado' y ninguna unidad lo controla."
+            }
+        ],
+        "image": "strategic_locations_4",
+        "victory_conditions": [
+            {
+                "id": "strategic_locations_controlled",
+                "description": "Por cada ubicación estratégica controlada",
+                "points": 30,
+                "is_repeatable": true,
+                "score_timing": "end_of_turn"
+            }
+        ],
+        "type": "secondary",
+        "summary": "Controla tantas ubicaciones estratégicas como sea posible."
+    },
+    {
+        "id": "control_hill",
+        "name": "Controla la Colina",
+        "description": "¡Controla la colina tan pronto como sea posible y defiéndela con tu vida!",
+        "image": "control_the_hill",
+        "victory_conditions": [
+            {
+                "id": "control_the_hill",
+                "description": "El jugador que controla la colina al final del turno de cada jugador gana un bono de 100 Puntos de Victoria.",
+                "points": 100,
+                "is_repeatable": true,
+                "score_timing": "end_of_turn"
+            }
+        ],
+        "type": "scenario",
+        "summary": "Controla la colina tan pronto como sea posible y defiéndela con tu vida!"
+    }
+]

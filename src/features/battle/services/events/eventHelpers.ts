@@ -1,21 +1,22 @@
-import { MatchEvent } from "../types/events/matchEvent";
-import { UnitStatus, Unit } from "../../player/types/unit";
 import { v4 as uuidv4 } from "react-native-uuid/dist/v4";
+import { Unit, UnitStatus } from "../../../armies/types/Unit";
+import { MatchEvent } from "../../types/event/matchEvent";
 
 const POINT_MULTIPLIERS: Record<UnitStatus, number> = {
   [UnitStatus.DESTROYED]: 1.0,
   [UnitStatus.FLED]: 1.0,
   [UnitStatus.FLEEING]: 0.5,
   [UnitStatus.UNDER_25_PERCENT]: 0.5,
-  [UnitStatus.STANDARD_CAPTURED]: 0, // treated as static value of 50 pts
-  [UnitStatus.HALF_DESTROYED]: 0.5, // Not supported yet at TOW 1.5 ruleset
+  [UnitStatus.STANDARD_CAPTURED]: 0,
+  [UnitStatus.HALF_DESTROYED]: 0.5,
   [UnitStatus.ALIVE]: 0,
 };
 
 export function getPointsForUnitEvent(unit: Unit, status: UnitStatus): number {
   if (status === UnitStatus.STANDARD_CAPTURED) {
-    return 50; 
+    return 50;
   }
+
   const multiplier = POINT_MULTIPLIERS[status];
   const baseCost = unit.cost || 0;
 
@@ -38,31 +39,31 @@ export function createMatchEventFromUnitStatus(
 
   switch (status) {
     case UnitStatus.DESTROYED:
-      return { 
-        ...base, 
-        type: UnitStatus.DESTROYED 
-    };
+      return {
+        ...base,
+        type: UnitStatus.DESTROYED,
+      };
     case UnitStatus.FLEEING:
       return {
-        ...base, 
-        type: UnitStatus.FLEEING 
-    };
+        ...base,
+        type: UnitStatus.FLEEING,
+      };
     case UnitStatus.FLED:
       return {
         ...base,
-        type: UnitStatus.FLED
-    };
+        type: UnitStatus.FLED,
+      };
     case UnitStatus.UNDER_25_PERCENT:
       return {
         ...base,
         type: UnitStatus.UNDER_25_PERCENT,
-        remainingSize: unit.initialSize ?? 0, 
+        remainingSize: unit.initialSize ?? 0,
       };
     case UnitStatus.STANDARD_CAPTURED:
       return {
         ...base,
         type: UnitStatus.STANDARD_CAPTURED,
-        fromPlayerId: unit.armyId, 
+        fromPlayerId: unit.armyId ?? "",
       };
     default:
       throw new Error(`Unit status ${status} not supported`);

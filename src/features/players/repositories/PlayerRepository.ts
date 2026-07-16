@@ -6,7 +6,7 @@ import { PlayerOrigin } from "../../players/types/PlayerOrigin";
 const STORAGE_KEY = "players";
 const STORAGE_MAP_KEY = "playerArmyMap";
 
-let cache: Player[] = [];
+let cache: Player[] | null = null;
 let playerArmyMap: Record<string, string[]> = {};
 
 function saveAll(players: Player[]) {
@@ -16,16 +16,24 @@ function saveAll(players: Player[]) {
 }
 
 function loadAll(): Player[] {
-    if (cache) return cache;
+    if (cache) {
+        return cache;
+    }
+
     const raw = loadString(STORAGE_KEY);
     const mapRaw = loadString(STORAGE_MAP_KEY);
 
-    cache = raw ? JSON.parse(raw) : [];
+    const storedPlayers = raw ? (JSON.parse(raw) as Player[]) : [];
+    cache = storedPlayers;
     playerArmyMap = mapRaw ? JSON.parse(mapRaw) : {};
-    return cache;
+    return storedPlayers;
 }
 
 export const PlayerRepository = {
+    async init() {
+        loadAll();
+    },
+
     save(player: Player) {
         const all = loadAll();
         const exists = all.find(p => p.id === player.id);
@@ -97,10 +105,12 @@ export const PlayerRepository = {
     },
 
     getArmies(playerId: string): string[] {
+        loadAll();
         return playerArmyMap[playerId] ?? [];
     },
 
     getArmiesMap(): Record<string, string[]> {
+        loadAll();
         return playerArmyMap;
     },
 
@@ -111,7 +121,7 @@ export const PlayerRepository = {
     },
 
     clearAll() {
-        cache = [];
+        cache = null;
         playerArmyMap = {};
         saveString(STORAGE_KEY, JSON.stringify([]));
         saveString(STORAGE_MAP_KEY, JSON.stringify({}));

@@ -1,0 +1,25 @@
+[
+    {
+        "id": "gl_fixed_at_6",
+        "name": "Límite de turnos fijo",
+        "turns": 6
+    },
+    {
+        "id": "gl_random",
+        "name": "Duración del juego aleatoria",
+        "turns": 5,
+        "notes": [
+            "Empezando al final de la quinta ronda, tira un D6 al final de cada ronda y añade el número de la ronda al tirada.",
+            "Si el resultado es mayor o igual a 10, el combate termina inmediatamente, de lo contrario, el combate continúa una ronda más."
+        ]
+    },
+    {
+        "id": "gl_break_point",
+        "name": "Punto de ruptura",
+        "notes": [
+            "Al principio de cualquier subfase de Inicio de Turno, si la Fuerza de Unidad restante de cualquiera de las armas ha caído por debajo de 25%, el combate termina inmediatamente.",
+            "Si solo una arma ha alcanzado su Punto de ruptura, sus unidades restantes comienzan a huir, cruzar a polvo, etc.",
+            "Si ambas las armas han alcanzado sus Puntos de ruptura, los puntos de victoria se acumulan como normal, pero los resultados serán Marginal (Victoria/Derrota)."
+        ]
+    }
+]

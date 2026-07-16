@@ -1,7 +1,6 @@
-import { ArmySnapshot } from "../../players/types/army";
+import { ArmySnapshot } from "./ArmySnapshot";
 import { MatchEvent } from "./event/matchEvent";
 import { ObjectiveOwner, ObjectiveType } from "./objective";
-
 
 export type GameLength = {
     turns: number;

@@ -1,4 +1,4 @@
-import { ScrollView, View, Image } from "react-native";
+import { ScrollView, View } from "react-native";
 import { useTranslation } from "react-i18next";
 import ThemedFrame from "../../../components/ThemedFrame";
 import ThemedText from "../../../components/ThemedText";
@@ -17,8 +17,8 @@ type ArmyListDetailProps = {
 const ArmyListDetail: React.FC<ArmyListDetailProps> = ({ army, onBack, onClose }) => {
     const { t } = useTranslation();
 
-    const coreLabels = getDifferentiatedLabels(army.core);
-    const specialLabels = getDifferentiatedLabels(army.special);
+    const coreLabels = getDifferentiatedLabels(army.core ?? []);
+    const specialLabels = getDifferentiatedLabels(army.special ?? []);
     const rareLabels = getDifferentiatedLabels(army.rare ?? []);
     const charLabels = getDifferentiatedLabels(army.characters ?? []);
 
