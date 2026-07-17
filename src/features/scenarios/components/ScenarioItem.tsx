@@ -1,4 +1,4 @@
-import { TouchableOpacity, View } from "react-native";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
 import ThemedImageBackground from "../../../components/ThemedImageBackground";
 import ThemedText from "../../../components/ThemedText";
 import { useTheme } from "../../../lib/theme/context/ThemeContext";
@@ -10,16 +10,19 @@ type ScenarioItemProps = {
     onPress: (scenario: EnrichedScenario) => void;
 };
 
+const styles = StyleSheet.create({
+    card: {
+        flexBasis: "48%",
+        maxWidth: "48%",
+    },
+});
+
 const ScenarioItem: React.FC<ScenarioItemProps> = ({ scenario, onPress }) => {
     const { theme } = useTheme();
 
     return (
         <TouchableOpacity
-            style={{
-                backgroundColor: theme.surface,
-                flexBasis: "48%",
-                maxWidth: "48%",
-            }}
+            style={[styles.card, { backgroundColor: theme.surface }]}
             className="pt-10 justify-center m-2 border overflow-hidden bg-surface"
             onPress={() => onPress(scenario)}
         >

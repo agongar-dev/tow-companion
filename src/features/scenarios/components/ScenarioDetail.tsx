@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Image, ScrollView, useWindowDimensions, View } from "react-native";
+import { Image, ScrollView, StyleSheet, useWindowDimensions, View } from "react-native";
 import officialIcon from "../../../assets/icons/warhammer-official.jpeg";
 import ThemedText from "../../../components/ThemedText";
 import ThemedTouchable from "../../../components/ThemedTouchable";
@@ -10,7 +10,6 @@ import { EnrichedScenario } from "../types/EnrichedScenario";
 import { GameLength } from "../types/GameLength";
 import { scenarioImages } from "../utils/scenarioImages";
 
-
 type ScenarioDetailProps = {
     scenario: EnrichedScenario;
     onClose: () => void;
@@ -18,18 +17,29 @@ type ScenarioDetailProps = {
     onBack: () => void;
 };
 
+const styles = StyleSheet.create({
+    scrollContent: {
+        paddingBottom: 20,
+    },
+    scenarioImage: {
+        width: '100%',
+    },
+    wrapRow: {
+        flexDirection: "row",
+        flexWrap: "wrap",
+        gap: 8,
+    },
+});
+
 const ScenarioDetail = ({ scenario, onClose, onLinkClick }: ScenarioDetailProps) => {
     const { height } = useWindowDimensions();
-
     const { t } = useTranslation();
 
     console.log('scemario', scenario);
 
     return (
         <ThemedView className="flex-1 p-4 bg-white">
-            <ScrollView contentContainerStyle={{ paddingBottom: 20 }}>
-
-                {/* Title */}
+            <ScrollView contentContainerStyle={styles.scrollContent}>
                 <View key={'title' + scenario.name} className="mb-6 flex-row justify-center">
                     <ThemedText className="text-2xl font-bold">
                         {scenario.name}
@@ -39,7 +49,6 @@ const ScenarioDetail = ({ scenario, onClose, onLinkClick }: ScenarioDetailProps)
                     )}
                 </View>
 
-                {/* Description */}
                 {scenario.description && (
                     <View key={'desc' + scenario.description} className="mb-6">
                         <ThemedText className="text-xl font-bold mb-2">{t('common.description')}</ThemedText>
@@ -47,7 +56,6 @@ const ScenarioDetail = ({ scenario, onClose, onLinkClick }: ScenarioDetailProps)
                     </View>
                 )}
 
-                {/* Image */}
                 {(scenario.remoteImage || scenario.localImage) && (
                     <View key={'ri' + scenario.remoteImage} className="flex-row justify-center mb-6 gap-2">
                         <Image
@@ -56,13 +64,12 @@ const ScenarioDetail = ({ scenario, onClose, onLinkClick }: ScenarioDetailProps)
                                     ? { uri: scenario.remoteImage }
                                     : scenarioImages[scenario.localImage]
                             }
-                            style={{ width: '100%', height: height * 0.4 }}
+                            style={[styles.scenarioImage, { height: height * 0.4 }]}
                             resizeMode="contain"
                         />
                     </View>
                 )}
 
-                {/* Setup Instructions */}
                 {scenario.setupInstructions?.map((si, i) => (
                     <View key={'si' + i} className="mb-6">
                         <ThemedText className="text-xl font-bold mb-2">{t('scenario-detail.setup-instructions')}</ThemedText>
@@ -70,7 +77,6 @@ const ScenarioDetail = ({ scenario, onClose, onLinkClick }: ScenarioDetailProps)
                     </View>
                 ))}
 
-                {/* Deployment Instructions */}
                 {scenario.deploymentInstructions?.map((di, i) => (
                     <View key={'di' + i} className="mb-6">
                         <ThemedText className="text-xl font-bold mb-2">{t('scenario-detail.deployment-instructions')}</ThemedText>
@@ -78,30 +84,28 @@ const ScenarioDetail = ({ scenario, onClose, onLinkClick }: ScenarioDetailProps)
                     </View>
                 ))}
 
-                {/* Rules */}
                 {scenario.specialRules && scenario.specialRules.length > 0 && (
-                    <View key={'sr' + scenario.specialRules.length} className="mb-6">
+                    <View key={'mo' + scenario.specialRules.length} className="mb-6">
                         <ThemedText className="text-xl font-bold mb-2">
                             {t('common.special-rules')}
                         </ThemedText>
                     </View>
                 )}
-                {scenario.specialRules?.map((r, i) => (
-                    <View key={'sr' + i} className="mb-6">
-                        <ThemedText className="font-bold mb-1">{r.title}</ThemedText>
-                        {Array.isArray(r.description) ? (
-                            r.description.map((desc, descIndex) => (
+                {scenario.specialRules?.map((rule, index) => (
+                    <View key={'sr' + index} className="mb-6">
+                        <ThemedText className="font-bold mb-1">{rule.title}</ThemedText>
+                        {Array.isArray(rule.description) ? (
+                            rule.description.map((desc, descIndex) => (
                                 <ThemedText key={descIndex} className="text-sm mb-2">
                                     {desc}
                                 </ThemedText>
                             ))
                         ) : (
-                            <ThemedText className="text-sm mb-2">{r.description}</ThemedText>
+                            <ThemedText className="text-sm mb-2">{rule.description}</ThemedText>
                         )}
                     </View>
                 ))}
 
-                {/* Main Objectives */}
                 {scenario.mainObjectives && scenario.mainObjectives.length > 0 && (
                     <View key={'mo' + scenario.mainObjectives.length} className="mb-6">
                         <ThemedText className="text-xl font-bold mb-2">
@@ -121,13 +125,12 @@ const ScenarioDetail = ({ scenario, onClose, onLinkClick }: ScenarioDetailProps)
                     </View>
                 )}
 
-                {/* Recommended Objectives */}
                 {scenario.recommendedObjectives.length > 0 && (
                     <View key={'ro' + scenario.recommendedObjectives.length} className="mb-6">
                         <ThemedText className="text-xl font-bold mb-2">
                             {t("scenario-detail.recommended-objectives")}
                         </ThemedText>
-                        <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8 }}>
+                        <View style={styles.wrapRow}>
                             {scenario.recommendedObjectives.map((obj: Objective) => (
                                 <ThemedTouchable
                                     key={obj.id}
@@ -143,13 +146,12 @@ const ScenarioDetail = ({ scenario, onClose, onLinkClick }: ScenarioDetailProps)
                     </View>
                 )}
 
-                {/* Game Length */}
                 {scenario.gameLength.length > 0 && (
                     <View className="mb-6">
                         <ThemedText className="text-xl font-bold mb-2">
                             {t("scenario-detail.game-length")}
                         </ThemedText>
-                        <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8 }}>
+                        <View style={styles.wrapRow}>
                             {scenario.gameLength.map((gl: GameLength) => (
                                 <ThemedTouchable
                                     key={gl.id}
@@ -164,7 +166,6 @@ const ScenarioDetail = ({ scenario, onClose, onLinkClick }: ScenarioDetailProps)
                         </View>
                     </View>
                 )}
-
             </ScrollView>
 
             <ThemedTouchable
@@ -174,7 +175,6 @@ const ScenarioDetail = ({ scenario, onClose, onLinkClick }: ScenarioDetailProps)
                 <ThemedText className="text-center font-bold">{t('common.close')}</ThemedText>
             </ThemedTouchable>
         </ThemedView >
-
     );
 };
 

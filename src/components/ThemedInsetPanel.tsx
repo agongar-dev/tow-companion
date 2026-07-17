@@ -12,7 +12,7 @@ type ThemedInsetPanelProps = {
 const ThemedInsetPanel: React.FC<ThemedInsetPanelProps> = ({ children, title, style, className, ...props }) => {
     const { theme, mode } = useTheme();
 
-    const insetColors = mode == ThemeMode.Dark
+    const insetColors = mode === ThemeMode.Dark
         ? ["#2a241c", "#1c1812"]
         : ["#d1c2a0ff", "#beab84ff"];
 
@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         padding: 12,
         marginVertical: 8,
-        // simulamos un biselado hacia dentro con sombras
         shadowColor: "#000",
         shadowOffset: { width: -10, height: 10 },
         shadowOpacity: 0.8,

@@ -7,6 +7,27 @@ type ThemedTableProps = {
     separator?: React.ReactNode;
 };
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        borderWidth: 0,
+        margin: 8,
+        overflow: "hidden",
+        backgroundColor: "transparent",
+    },
+    content: {
+        paddingVertical: 10,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "stretch",
+    },
+    defaultSeparator: {
+        borderBottomWidth: 1,
+        marginHorizontal: 12,
+        marginVertical: 6,
+    },
+});
+
 const ThemedTable: React.FC<ThemedTableProps> = ({ children, separator }) => {
     const { theme } = useTheme();
 
@@ -14,7 +35,7 @@ const ThemedTable: React.FC<ThemedTableProps> = ({ children, separator }) => {
 
     return (
         <ScrollView
-            style={[styles.container, { backgroundColor: "transparent" }]}
+            style={styles.container}
             contentContainerStyle={styles.content}
         >
             {rows.map((row, index) => (
@@ -32,25 +53,5 @@ const ThemedTable: React.FC<ThemedTableProps> = ({ children, separator }) => {
         </ScrollView>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        borderWidth: 0,
-        margin: 8,
-        overflow: "hidden",
-    },
-    content: {
-        paddingVertical: 10,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "stretch",
-    },
-    defaultSeparator: {
-        borderBottomWidth: 1,
-        marginHorizontal: 12,
-        marginVertical: 6,
-    },
-});
 
 export default ThemedTable;

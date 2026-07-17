@@ -1,4 +1,4 @@
-import { TouchableOpacity, View } from "react-native";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
 import ThemedImageBackground from "../../../components/ThemedImageBackground";
 import ThemedText from "../../../components/ThemedText";
 import { useTheme } from "../../../lib/theme/context/ThemeContext";
@@ -10,17 +10,20 @@ type ObjectiveItemProps = {
     onPress: (mapLayout: EnrichedMapLayout) => void;
 };
 
-const MapLayoutItem: React.FC<ObjectiveItemProps> = ({ mapLayout: mapLayout, onPress }) => {
+const styles = StyleSheet.create({
+    card: {
+        flexBasis: "48%",
+        maxWidth: "48%",
+        elevation: 5,
+    },
+});
+
+const MapLayoutItem: React.FC<ObjectiveItemProps> = ({ mapLayout, onPress }) => {
     const { theme } = useTheme();
 
     return (
         <TouchableOpacity
-            style={{
-                backgroundColor: theme.surface,
-                flexBasis: "48%",
-                maxWidth: "48%",
-                elevation: 5,
-            }}
+            style={[styles.card, { backgroundColor: theme.surface }]}
             className="pt-10 justify-center m-2 border overflow-hidden"
             onPress={() => onPress(mapLayout)}
         >

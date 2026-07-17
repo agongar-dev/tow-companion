@@ -1,7 +1,7 @@
 import React, { createContext, useState, useMemo } from "react";
 import { Drawer } from "react-native-drawer-layout";
 import CustomDrawer from "./drawer/CustomDrawer";
-import { useWindowDimensions } from "react-native";
+import { StyleSheet, useWindowDimensions } from "react-native";
 
 export const RightDrawerContext = createContext<{
     openRightDrawer: (content: React.ReactNode) => void;
@@ -11,8 +11,13 @@ export const RightDrawerContext = createContext<{
     closeRightDrawer: () => { },
 });
 
-export default function RightDrawerProvider() {
+const styles = StyleSheet.create({
+    drawer: {
+        backgroundColor: "transparent",
+    },
+});
 
+export default function RightDrawerProvider() {
     const { width } = useWindowDimensions();
 
     const [rightDrawerOpen, setRightDrawerOpen] = useState(false);
@@ -39,7 +44,7 @@ export default function RightDrawerProvider() {
             onClose={() => setRightDrawerOpen(false)}
             drawerPosition="right"
             drawerType="front"
-            drawerStyle={{ width: width / 1.3, backgroundColor: "transparent" }}
+            drawerStyle={[styles.drawer, { width: width / 1.3 }]}
             swipeEnabled={false}
             renderDrawerContent={() => drawerContent}
         >

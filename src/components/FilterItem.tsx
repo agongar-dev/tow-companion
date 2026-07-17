@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "../lib/theme/context/ThemeContext";
 import ThemedTouchable from "./ThemedTouchable";
@@ -10,6 +10,14 @@ type FilterItemProps = {
     toggleFilter: (filter: string) => void;
 };
 
+const styles = StyleSheet.create({
+    filterButton: {
+        paddingHorizontal: 12,
+        paddingVertical: 4,
+        borderWidth: 2,
+    },
+});
+
 const FilterItem: React.FC<FilterItemProps> = ({ filters, activeFilters, toggleFilter }) => {
     const { t } = useTranslation();
     const { theme } = useTheme();
@@ -18,18 +26,20 @@ const FilterItem: React.FC<FilterItemProps> = ({ filters, activeFilters, toggleF
         <View className="flex-row justify-center flex-wrap gap-2 mb-4">
             {filters.map(tag => {
                 if (!tag) return null;
+
                 const isActive = activeFilters.includes(tag);
+
                 return (
                     <ThemedTouchable
                         key={tag}
                         onPress={() => toggleFilter(tag)}
-                        style={{
-                            paddingHorizontal: 12,
-                            paddingVertical: 4,
-                            borderWidth: 2,
-                            backgroundColor: isActive ? theme.accent : theme.surface,
-                            borderColor: isActive ? theme.text : theme.border,
-                        }}
+                        style={[
+                            styles.filterButton,
+                            {
+                                backgroundColor: isActive ? theme.accent : theme.surface,
+                                borderColor: isActive ? theme.text : theme.border,
+                            },
+                        ]}
                     >
                         <ThemedText style={{ color: isActive ? theme.surface : theme.text }}>
                             {t(`filters.${tag}`, tag)}

@@ -1,4 +1,4 @@
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { DrawerContentComponentProps, createDrawerNavigator } from '@react-navigation/drawer';
 import HomeScreen from '../../features/home/screens/HomeScreen';
 import ObjectivesScreen from '../../features/objectives/screens/ObjectivesScreen';
 import PlayersScreen from '../../features/players/screens/PlayerListScreen';
@@ -9,12 +9,17 @@ import CustomDrawerContent from './CustomDrawerContent';
 import ArmiesScreen from '../../features/armies/screens/ArmiesScreen';
 
 const Drawer = createDrawerNavigator();
+const DRAWER_WIDTH = 300;
+const SWIPE_EDGE_WIDTH = 100;
+
+const renderDrawerContent = (props: DrawerContentComponentProps) => (
+    <CustomDrawerContent {...props} />
+);
 
 export default function CustomDrawer() {
-
     return (
         <Drawer.Navigator
-            drawerContent={(props) => <CustomDrawerContent {...props} />}
+            drawerContent={renderDrawerContent}
             screenOptions={{
                 headerShown: false,
                 drawerType: "front",
@@ -22,10 +27,10 @@ export default function CustomDrawer() {
                 swipeEnabled: true,
                 drawerStyle: {
                     backgroundColor: 'transparent',
-                    width: 300,
+                    width: DRAWER_WIDTH,
                     zIndex: 10,
                 },
-                swipeEdgeWidth: 100,
+                swipeEdgeWidth: SWIPE_EDGE_WIDTH,
             }}
         >
             <Drawer.Screen name="Home" component={HomeScreen} />

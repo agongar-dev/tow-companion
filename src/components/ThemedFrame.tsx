@@ -7,38 +7,6 @@ type ThemedFrameProps = {
     imageResize?: ImageResizeMode;
 };
 
-const ThemedFrame: React.FC<ThemedFrameProps> = ({
-    imageSource,
-    children,
-    imageResize = "stretch",
-}) => {
-
-    const { theme } = useTheme();
-
-    return (
-        <ImageBackground
-            source={imageSource}
-            resizeMode={imageResize}
-            style={styles.frame}
-        >
-            <View style={styles.content}>
-                <View style={{
-                position: 'absolute',
-                top: "1.5%",
-                left: "5%",
-                right: "4%",
-                bottom: "3.5%",
-                backgroundColor: theme.surface,
-                opacity: 0.6
-            }} />
-                <View style={{ flex: 1}}>
-                    {children}
-                </View>
-            </View>
-        </ImageBackground>
-    );
-};
-
 const styles = StyleSheet.create({
     frame: {
         flex: 1,
@@ -52,6 +20,40 @@ const styles = StyleSheet.create({
         paddingEnd: "6%",
         paddingBottom: "4%",
     },
+    overlay: {
+        position: 'absolute',
+        top: "1.5%",
+        left: "5%",
+        right: "4%",
+        bottom: "3.5%",
+        opacity: 0.6,
+    },
+    body: {
+        flex: 1,
+    },
 });
+
+const ThemedFrame: React.FC<ThemedFrameProps> = ({
+    imageSource,
+    children,
+    imageResize = "stretch",
+}) => {
+    const { theme } = useTheme();
+
+    return (
+        <ImageBackground
+            source={imageSource}
+            resizeMode={imageResize}
+            style={styles.frame}
+        >
+            <View style={styles.content}>
+                <View style={[styles.overlay, { backgroundColor: theme.surface }]} />
+                <View style={styles.body}>
+                    {children}
+                </View>
+            </View>
+        </ImageBackground>
+    );
+};
 
 export default ThemedFrame;

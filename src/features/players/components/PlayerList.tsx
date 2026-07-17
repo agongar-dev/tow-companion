@@ -1,4 +1,4 @@
-import { FlatList, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 import { Player } from "../types/player";
 import { ArmyList } from "../../armies/types/ArmyList";
 import PlayerListItem from "./PlayerListItem";
@@ -8,6 +8,13 @@ type PlayerListProps = {
     armies: Record<string, ArmyList>;
     onSelect: (army: ArmyList) => void;
 };
+
+const styles = StyleSheet.create({
+    contentContainer: {
+        paddingBottom: 8,
+        paddingHorizontal: 4,
+    },
+});
 
 const PlayerList: React.FC<PlayerListProps> = ({ players, armies, onSelect }) => {
     return (
@@ -28,10 +35,7 @@ const PlayerList: React.FC<PlayerListProps> = ({ players, armies, onSelect }) =>
                     );
                 }}
                 scrollEnabled={true}
-                contentContainerStyle={{
-                    paddingBottom: 8,
-                    paddingHorizontal: 4,
-                }}
+                contentContainerStyle={styles.contentContainer}
             />
         </View>
     );

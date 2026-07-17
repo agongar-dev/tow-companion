@@ -1,4 +1,5 @@
 import { NavigationContainer } from '@react-navigation/native';
+import { StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import "../global.css";
 import { AudioSettingsProvider } from './lib/audio/context/AudioContext';
@@ -16,27 +17,29 @@ import { TerrainTypeRepository } from './features/terrains/repositories/TerrainT
 import { TerrainItemRepository } from './features/terrains/repositories/TerrainItemRepository';
 import { PlayerRepository } from './features/players/repositories/PlayerRepository';
 
-const App = () => {
+const initializeRepositories = async () => {
+	await TerrainItemRepository.init();
+	await TerrainTypeRepository.init();
+	await MapLayoutRepository.init();
+	await ObjectiveRepository.init();
+	await GameLengthRepository.init();
+	await ScenarioRepository.init();
+	await PlayerRepository.init();
+};
 
+const App = () => {
 	const [isReady, setIsReady] = useState(false);
 
 	useEffect(() => {
 		const preload = async () => {
 			try {
-				await TerrainItemRepository.init();
-				await TerrainTypeRepository.init()
-				await MapLayoutRepository.init(),
-
-				await ObjectiveRepository.init(),
-				await GameLengthRepository.init(),
-				await ScenarioRepository.init(),
-				await PlayerRepository.init(),
-
+				await initializeRepositories();
 				setIsReady(true);
 			} catch (e) {
 				console.log('preload error', e);
 			}
 		};
+
 		preload();
 	}, []);
 
@@ -46,7 +49,7 @@ const App = () => {
 	}
 
 	return (
-		<GestureHandlerRootView style={{ flex: 1 }}>
+		<GestureHandlerRootView style={styles.root}>
 			<SettingsProvider>
 				<AudioSettingsProvider>
 					<ThemeProvider>
@@ -57,9 +60,15 @@ const App = () => {
 						</DrawerProvider>
 					</ThemeProvider>
 				</AudioSettingsProvider>
-			</SettingsProvider >
-		</GestureHandlerRootView >
+			</SettingsProvider>
+		</GestureHandlerRootView>
 	);
 };
+
+const styles = StyleSheet.create({
+	root: {
+		flex: 1,
+	},
+});
 
 export default App;

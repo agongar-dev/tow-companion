@@ -1,4 +1,4 @@
-import { FlatList, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 
 import { EnrichedMapLayout } from "../types/EnrichedMapLayout";
 import MapLayoutItem from "./MapLayoutItem";
@@ -8,8 +8,14 @@ type MapLayoutListProps = {
     onSelect: (mapLayout: EnrichedMapLayout) => void;
 };
 
-const MapLayoutList: React.FC<MapLayoutListProps> = ({ mapLayouts, onSelect }) => {
+const styles = StyleSheet.create({
+    contentContainer: {
+        paddingBottom: 8,
+        paddingHorizontal: 4,
+    },
+});
 
+const MapLayoutList: React.FC<MapLayoutListProps> = ({ mapLayouts, onSelect }) => {
     return (
         <View className="flex-1 w-full">
             <FlatList
@@ -18,10 +24,7 @@ const MapLayoutList: React.FC<MapLayoutListProps> = ({ mapLayouts, onSelect }) =
                 keyExtractor={(mapLayout) => mapLayout.id}
                 renderItem={({ item }) => <MapLayoutItem mapLayout={item} onPress={onSelect} />}
                 scrollEnabled={true}
-                contentContainerStyle={{
-                    paddingBottom: 8,
-                    paddingHorizontal: 4
-                }}
+                contentContainerStyle={styles.contentContainer}
             />
         </View>
     );

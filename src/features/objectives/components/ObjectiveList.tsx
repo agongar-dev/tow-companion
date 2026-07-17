@@ -1,4 +1,4 @@
-import { FlatList, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 import { Objective } from "../types/Objective";
 import ObjectiveItem from "./ObjectiveItem";
 
@@ -7,8 +7,14 @@ type ObjectiveListProps = {
     onSelect: (objective: Objective) => void;
 };
 
-const ObjectiveList: React.FC<ObjectiveListProps> = ({ objectives, onSelect }) => {
+const styles = StyleSheet.create({
+    contentContainer: {
+        paddingBottom: 8,
+        paddingHorizontal: 4,
+    },
+});
 
+const ObjectiveList: React.FC<ObjectiveListProps> = ({ objectives, onSelect }) => {
     return (
         <View className="flex-1 w-full">
             <FlatList
@@ -17,10 +23,7 @@ const ObjectiveList: React.FC<ObjectiveListProps> = ({ objectives, onSelect }) =
                 keyExtractor={(objective) => objective.id}
                 renderItem={({ item }) => <ObjectiveItem objective={item} onPress={onSelect} />}
                 scrollEnabled={true}
-                contentContainerStyle={{
-                    paddingBottom: 8,
-                    paddingHorizontal: 4,
-                }}
+                contentContainerStyle={styles.contentContainer}
             />
         </View>
     );

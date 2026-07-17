@@ -1,5 +1,13 @@
-import { TouchableOpacity, TouchableOpacityProps } from "react-native";
+import { StyleSheet, TouchableOpacity, TouchableOpacityProps } from "react-native";
 import { useTheme } from "../lib/theme/context/ThemeContext";
+
+const styles = StyleSheet.create({
+    touchable: {
+        borderWidth: 2,
+        margin: 1,
+        padding: 12,
+    },
+});
 
 const ThemedTouchable = ({ style, className, ...props }: TouchableOpacityProps) => {
     const { theme } = useTheme();
@@ -8,13 +16,12 @@ const ThemedTouchable = ({ style, className, ...props }: TouchableOpacityProps) 
         <TouchableOpacity
             {...props}
             style={[
+                styles.touchable,
                 {
                     borderColor: theme.border,
-                    borderWidth: 2,
                     backgroundColor: theme.accent,
-                    margin: 1,
-                    padding: 12,
-                }, style,
+                },
+                style,
             ]}
             className={className}
         />

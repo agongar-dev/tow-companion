@@ -1,4 +1,4 @@
-import { ScrollView, View, Image } from "react-native";
+import { Image, ScrollView, StyleSheet, View } from "react-native";
 import ThemedFrame from "../../../components/ThemedFrame";
 import ThemedText from "../../../components/ThemedText";
 import ThemedTouchable from "../../../components/ThemedTouchable";
@@ -6,7 +6,7 @@ import imageFrame from "../../../assets/images/frame/frame-portrait.png";
 import { Objective } from "../types/Objective";
 import { ScoreTiming } from "../types/ScoreTiming";
 import { useTranslation } from "react-i18next";
-import { t } from "i18next";
+import { t as translate } from "i18next";
 import { objectiveImages } from "../utils/objectiveImages";
 import { SelectableDetail } from "../../../shared/types/SelectableDetail";
 
@@ -18,17 +18,33 @@ type ObjectiveDetailProps = {
     onClose?: () => void;
 };
 
-const getScoreTimingLabel = (timing?: ScoreTiming) => {
+const IMAGE_HEIGHT = 200;
 
+const styles = StyleSheet.create({
+    inlineImage: {
+        width: "100%",
+        height: IMAGE_HEIGHT,
+        marginBottom: 8,
+        borderRadius: 8,
+    },
+    detailImage: {
+        width: "100%",
+        height: IMAGE_HEIGHT,
+        marginBottom: 16,
+        borderRadius: 8,
+    },
+});
+
+const getScoreTimingLabel = (timing?: ScoreTiming) => {
     if (!timing) return timing;
 
     switch (timing) {
         case ScoreTiming.IMMEDIATE:
-            return t('objective-detail.score-timing.immediate');
+            return translate('objective-detail.score-timing.immediate');
         case ScoreTiming.END_OF_TURN:
-            return t('objective-detail.score-timing.end-of-turn');
+            return translate('objective-detail.score-timing.end-of-turn');
         case ScoreTiming.END_OF_BATTLE:
-            return t('objective-detail.score-timing.end-of-battle');
+            return translate('objective-detail.score-timing.end-of-battle');
         default:
             return timing;
     }
@@ -45,22 +61,25 @@ const ObjectiveDetail: React.FC<ObjectiveDetailProps & { inline?: boolean }> = (
                     <ThemedText className="text-sm mb-3 text-center">{objective.summary}</ThemedText>
 
                     {objective.image && (
-                        <Image source={objective.image.startsWith("http") ? { uri: objective.image } : objectiveImages[objective.image]} style={{ width: "100%", height: 200, marginBottom: 8, borderRadius: 8 }} resizeMode="contain" />
+                        <Image
+                            source={objective.image.startsWith("http") ? { uri: objective.image } : objectiveImages[objective.image]}
+                            style={styles.inlineImage}
+                            resizeMode="contain"
+                        />
                     )}
 
-                    {/* Victory Conditions */}
                     {objective.victoryConditions && objective.victoryConditions.length > 0 && (
-                    <View className="space-y-1">
-                        {objective.victoryConditions?.map(vc => (
-                            <View key={vc.id} className="flex-row justify-between items-center">
-                                <ThemedText className="text-sm flex-1">{vc.description}</ThemedText>
-                                <View className="flex-col justify-end">
-                                    <ThemedText className="text-sm font-bold">{getScoreTimingLabel(vc.scoreTiming)}</ThemedText>
-                                    <ThemedText className="text-sm font-bold ml-2">{vc.points} pts</ThemedText>
+                        <View className="space-y-1">
+                            {objective.victoryConditions?.map(vc => (
+                                <View key={vc.id} className="flex-row justify-between items-center">
+                                    <ThemedText className="text-sm flex-1">{vc.description}</ThemedText>
+                                    <View className="flex-col justify-end">
+                                        <ThemedText className="text-sm font-bold">{getScoreTimingLabel(vc.scoreTiming)}</ThemedText>
+                                        <ThemedText className="text-sm font-bold ml-2">{vc.points} pts</ThemedText>
+                                    </View>
                                 </View>
-                            </View>
-                        ))}
-                    </View>
+                            ))}
+                        </View>
                     )}
                 </View>
             </ThemedFrame>
@@ -83,16 +102,14 @@ const ObjectiveDetail: React.FC<ObjectiveDetailProps & { inline?: boolean }> = (
 
             <ThemedText className="text-sm mb-4 text-center">{objective.summary}</ThemedText>
 
-            {/* Image */}
             {objective.image && (
                 <Image
                     source={objective.image.startsWith("http") ? { uri: objective.image } : objectiveImages[objective.image]}
-                    style={{ width: "100%", height: 200, marginBottom: 16, borderRadius: 8 }}
+                    style={styles.detailImage}
                     resizeMode="contain"
                 />
             )}
 
-            {/* Description */}
             {objective.description && objective.description.length > 0 && (
                 <View className="mb-6">
                     <ThemedText className="text-xl font-bold mb-2">
@@ -106,7 +123,6 @@ const ObjectiveDetail: React.FC<ObjectiveDetailProps & { inline?: boolean }> = (
                 </View>
             )}
 
-            {/* Rules */}
             {objective.objectiveRules && objective.objectiveRules.length > 0 && (
                 <View className="mb-6">
                     <ThemedText className="text-xl font-bold mb-2">
@@ -129,7 +145,6 @@ const ObjectiveDetail: React.FC<ObjectiveDetailProps & { inline?: boolean }> = (
                 </View>
             )}
 
-            {/* Victory Conditions */}
             {objective.victoryConditions && objective.victoryConditions.length > 0 && (
                 <View className="mb-6">
                     <ThemedText className="text-lg font-bold mb-2">
@@ -144,7 +159,7 @@ const ObjectiveDetail: React.FC<ObjectiveDetailProps & { inline?: boolean }> = (
                                         {t('common.points')}: {vc.points}
                                     </ThemedText>
                                     <ThemedText className="text-sm">
-                                        {t('objective-detail.repeatable')}:{" "}
+                                        {t('objective-detail.repeatable')}: {" "}
                                         {vc.isRepeatable ? t('common.yes') : t('common.no')}
                                     </ThemedText>
                                 </View>
@@ -153,7 +168,6 @@ const ObjectiveDetail: React.FC<ObjectiveDetailProps & { inline?: boolean }> = (
                                 </ThemedText>
                             </View>
                         ))}
-
                     </View>
                 </View>
             )}

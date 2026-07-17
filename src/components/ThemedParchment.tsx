@@ -12,7 +12,7 @@ type ThemeParchmentProps = {
 const ThemedParchment: React.FC<ThemeParchmentProps> = ({ children, title, style, className, ...props }) => {
     const { theme, mode } = useTheme();
 
-    const parchmentColors = mode == ThemeMode.Dark
+    const parchmentColors = mode === ThemeMode.Dark
         ? ["#3a2e1f", "#4a3a25", "#2c241a"]
         : ["#f3e8d8", "#e9dbc2", "#d6c5a8"];
 

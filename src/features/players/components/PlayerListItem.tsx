@@ -1,4 +1,4 @@
-import { TouchableOpacity, View, Image } from "react-native";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import ThemedText from "../../../components/ThemedText";
 import { Player } from "../types/player";
 import { ArmyList } from "../../armies/types/ArmyList";
@@ -10,35 +10,40 @@ type PlayerListItemProps = {
     onPress: () => void;
 };
 
-const PlayerListItem: React.FC<PlayerListItemProps> = ({ player, army, onPress }) => {
+const styles = StyleSheet.create({
+    card: {
+        elevation: 3,
+    },
+    avatar: {
+        width: 40,
+        height: 40,
+        marginRight: 8,
+    },
+});
 
+const PlayerListItem: React.FC<PlayerListItemProps> = ({ player, army, onPress }) => {
     const { theme } = useTheme();
 
     return (
         <TouchableOpacity
-            style={{
-                backgroundColor: theme.surface,
-                elevation: 3,
-            }}
+            style={[styles.card, { backgroundColor: theme.surface }]}
             className="m-2 p-4 border flex-row items-center"
             onPress={onPress}
             disabled={!army}
         >
-            {/* Faction image */}
             {army?.faction.image && (
                 <Image
                     source={{ uri: army.faction.image }}
-                    style={{ width: 40, height: 40, marginRight: 8 }}
+                    style={styles.avatar}
                     resizeMode="contain"
                 />
             )}
 
-            {/* Player image */}
             <View className="flex-row items-center justify-center">
                 {player.image && (
                     <Image
                         source={{ uri: player.image }}
-                        style={{ width: 40, height: 40, marginRight: 8 }}
+                        style={styles.avatar}
                         resizeMode="cover"
                     />
                 )}

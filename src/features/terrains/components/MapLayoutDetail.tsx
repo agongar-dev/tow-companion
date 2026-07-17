@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Image, useWindowDimensions, View, FlatList } from "react-native";
+import { FlatList, Image, StyleSheet, useWindowDimensions, View } from "react-native";
 import officialIcon from "../../../assets/icons/warhammer-official.jpeg";
 import ThemedText from "../../../components/ThemedText";
 import ThemedTouchable from "../../../components/ThemedTouchable";
@@ -17,6 +17,44 @@ type MapLayoutDetailProps = {
     onLinkClick?: (link: SelectableDetail) => void;
 };
 
+const HEADER_FLEX_IMAGE = 2;
+const HEADER_FLEX_POSITION = 2;
+const HEADER_FLEX_NAME = 3;
+const HEADER_FLEX_TYPES = 3;
+
+const styles = StyleSheet.create({
+    divider: {
+        width: "100%",
+        height: 12,
+    },
+    fullWidth: {
+        width: "100%",
+    },
+    listContent: {
+        paddingBottom: 20,
+    },
+    imageHeader: {
+        flex: HEADER_FLEX_IMAGE,
+    },
+    positionHeader: {
+        flex: HEADER_FLEX_POSITION,
+    },
+    nameHeader: {
+        flex: HEADER_FLEX_NAME,
+    },
+    typesHeader: {
+        flex: HEADER_FLEX_TYPES,
+    },
+});
+
+const DividerSeparator = () => (
+    <Image
+        source={divider}
+        resizeMode="contain"
+        style={styles.divider}
+    />
+);
+
 const MapLayoutDetail = ({ mapLayout, onClose, onLinkClick }: MapLayoutDetailProps) => {
     const { height } = useWindowDimensions();
     const { t } = useTranslation();
@@ -29,16 +67,9 @@ const MapLayoutDetail = ({ mapLayout, onClose, onLinkClick }: MapLayoutDetailPro
                 renderItem={({ item }) => (
                     <SceneryItemsTableRow itemAndPosition={item} onLinkClick={onLinkClick} />
                 )}
-                ItemSeparatorComponent={() => (
-                    <Image
-                        source={divider}
-                        resizeMode="contain"
-                        style={{ width: "100%", height: 12 }}
-                    />
-                )}
+                ItemSeparatorComponent={DividerSeparator}
                 ListHeaderComponent={
                     <>
-                        {/* Title */}
                         <View className="mb-6 flex-row justify-center">
                             <ThemedText className="text-2xl font-bold">
                                 {mapLayout.name}
@@ -52,7 +83,6 @@ const MapLayoutDetail = ({ mapLayout, onClose, onLinkClick }: MapLayoutDetailPro
                             )}
                         </View>
 
-                        {/* Description */}
                         {mapLayout.description && (
                             <View className="mb-6">
                                 <ThemedText className="text-xl font-bold mb-2">
@@ -64,7 +94,6 @@ const MapLayoutDetail = ({ mapLayout, onClose, onLinkClick }: MapLayoutDetailPro
                             </View>
                         )}
 
-                        {/* Image */}
                         {mapLayout.image && (
                             <View className="flex-row justify-center mb-6 gap-2">
                                 <Image
@@ -73,24 +102,23 @@ const MapLayoutDetail = ({ mapLayout, onClose, onLinkClick }: MapLayoutDetailPro
                                             ? { uri: mapLayout.image }
                                             : mapLayoutImages[mapLayout.image]
                                     }
-                                    style={{ width: "100%", height: height * 0.5 }}
+                                    style={[styles.fullWidth, { height: height * 0.5 }]}
                                     resizeMode="contain"
                                 />
                             </View>
                         )}
 
-                        {/* Table Header */}
                         <View className="flex-row border-b border pb-2 mb-2">
-                            <ThemedText style={{ flex: 2 }} className="font-bold text-center">
+                            <ThemedText style={styles.imageHeader} className="font-bold text-center">
                                 {t("common.image")}
                             </ThemedText>
-                            <ThemedText style={{ flex: 2 }} className="font-bold text-center">
+                            <ThemedText style={styles.positionHeader} className="font-bold text-center">
                                 {t("common.position")}
                             </ThemedText>
-                            <ThemedText style={{ flex: 3 }} className="font-bold text-center">
+                            <ThemedText style={styles.nameHeader} className="font-bold text-center">
                                 {t("common.name")}
                             </ThemedText>
-                            <ThemedText style={{ flex: 3 }} className="font-bold text-center">
+                            <ThemedText style={styles.typesHeader} className="font-bold text-center">
                                 {t("common.types")}
                             </ThemedText>
                         </View>
@@ -103,7 +131,7 @@ const MapLayoutDetail = ({ mapLayout, onClose, onLinkClick }: MapLayoutDetailPro
                         </ThemedText>
                     </ThemedTouchable>
                 }
-                contentContainerStyle={{ paddingBottom: 20 }}
+                contentContainerStyle={styles.listContent}
             />
         </ThemedView>
     );

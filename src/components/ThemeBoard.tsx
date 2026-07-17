@@ -13,7 +13,7 @@ type ThemedBoardProps = ViewProps & {
 const ThemedBoard: React.FC<ThemedBoardProps> = ({ children, title, style, ...props }) => {
     const { theme, mode } = useTheme();
 
-    const woodColors = mode == ThemeMode.Dark
+    const woodColors = mode === ThemeMode.Dark
         ? ["#2d1b0f", "#3a2415", "#4a2f1b"]
         : ["#e0c097", "#d1a66d", "#b88946"];
 

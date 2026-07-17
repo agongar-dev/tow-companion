@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { FlatList, SectionList } from "react-native";
+import { FlatList, SectionList, StyleSheet } from "react-native";
 import ThemedText from "../../../components/ThemedText";
 import { EnrichedScenario } from "../types/EnrichedScenario";
 import ScenarioItem from "./ScenarioItem";
@@ -9,18 +9,27 @@ type ScenarioListProps = {
     onSelect: (scenario: EnrichedScenario) => void;
 };
 
+const styles = StyleSheet.create({
+    sectionListContent: {
+        paddingBottom: 16,
+        paddingHorizontal: 4,
+    },
+    gridContent: {
+        paddingBottom: 8,
+        paddingHorizontal: 4,
+    },
+});
+
 const ScenarioList: React.FC<ScenarioListProps> = ({ scenarios, onSelect }) => {
     const { t } = useTranslation();
 
-    const singleScenarios = scenarios.filter((s) => s.tags?.includes("single"));
-    const doubleScenarios = scenarios.filter((s) => s.tags?.includes("double"));
+    const singleScenarios = scenarios.filter((scenario) => scenario.tags?.includes("single"));
+    const doubleScenarios = scenarios.filter((scenario) => scenario.tags?.includes("double"));
 
     const sections = [
         ...(singleScenarios.length > 0 ? [{ title: t("scenario-list.single.title"), data: [singleScenarios] }] : []),
         ...(doubleScenarios.length > 0 ? [{ title: t("scenario-list.double.title"), data: [doubleScenarios] }] : []),
     ];
-
-    let listIndex = 0;
 
     return (
         <SectionList
@@ -29,25 +38,19 @@ const ScenarioList: React.FC<ScenarioListProps> = ({ scenarios, onSelect }) => {
             renderSectionHeader={({ section }) => (
                 <ThemedText className="text-lg font-bold mb-2">{section.title}</ThemedText>
             )}
-            renderItem={({ item }) => (
+            renderItem={({ item: sectionScenarios }) => (
                 <FlatList
-                    data={item}
+                    data={sectionScenarios}
                     numColumns={2}
                     keyExtractor={(scenario) => scenario.id}
-                    renderItem={({ item }) => <ScenarioItem key={listIndex++} scenario={item} onPress={onSelect} />}
+                    renderItem={({ item: scenarioItem }) => <ScenarioItem scenario={scenarioItem} onPress={onSelect} />}
                     scrollEnabled={false}
-                    contentContainerStyle={{
-                        paddingBottom: 8,
-                        paddingHorizontal: 4,
-                    }}
+                    contentContainerStyle={styles.gridContent}
                 />
             )}
             showsVerticalScrollIndicator={true}
             stickySectionHeadersEnabled={false}
-            contentContainerStyle={{
-                paddingBottom: 16,
-                paddingHorizontal: 4,
-            }}
+            contentContainerStyle={styles.sectionListContent}
         />
     );
 };
